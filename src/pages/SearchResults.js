@@ -1,55 +1,17 @@
 import React from 'react'
 import './styles/SearchResults.css'
+import ListOfCards from '../components/ListOfCards'
+import useResults from '../hooks/useResults'
 
-
-export default function SearchResults() {
-
+export default function SearchResults({params}) {
+  const {keyword} = params
+  const {loading, data} = useResults({keyword})
+  console.log(data)
   return (
     <>
-      <figure className="Card__Container" >
-        
-        <img className="Card__Image" src="https://agfstorage.blob.core.windows.net/misc/FP_com/2021/04/01/Oppystrawberriesedited.jpg" />
-        
-        <div className="Info" >
-          <span className="Info__Kicker">Smoothie</span>
-          <h1 className="Info__Title" >Citrus</h1>
-          <span className="Info--Relevant" > 340 Kcal</span>
-        </div>
-
-      </figure>
-      <figure className="Card__Container" >
-        
-        <img className="Card__Image" src="https://agfstorage.blob.core.windows.net/misc/FP_com/2021/04/01/Oppystrawberriesedited.jpg" />
-        
-        <div className="Info" >
-          <span className="Info__Kicker">Smoothie</span>
-          <h1 className="Info__Title" >Citrus</h1>
-          <span className="Info--Relevant" > 340 Kcal</span>
-        </div>
-
-      </figure>
-      <figure className="Card__Container" >
-        
-        <img className="Card__Image" src="https://agfstorage.blob.core.windows.net/misc/FP_com/2021/04/01/Oppystrawberriesedited.jpg" />
-        
-        <div className="Info" >
-          <span className="Info__Kicker">Smoothie</span>
-          <h1 className="Info__Title" >Citrus</h1>
-          <span className="Info--Relevant" > 340 Kcal</span>
-        </div>
-
-      </figure>
-      <figure className="Card__Container" >
-        
-        <img className="Card__Image" src="https://agfstorage.blob.core.windows.net/misc/FP_com/2021/04/01/Oppystrawberriesedited.jpg" />
-        
-        <div className="Info" >
-          <span className="Info__Kicker">Smoothie</span>
-          <h1 className="Info__Title" >Citrus</h1>
-          <span className="Info--Relevant" > 340 Kcal</span>
-        </div>
-
-      </figure>
+    {
+    loading ? <i>Cargando...</i> : <ListOfCards cards={data} />
+    }    
     </>
   )
 }

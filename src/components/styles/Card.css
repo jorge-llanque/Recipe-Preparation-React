@@ -1,0 +1,41 @@
+.Card__Container {
+  background-color: #000;
+  width: 80%;
+  max-width: 350px;
+  height: 230px;
+  border-radius: 2.5em;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.Card__Image {
+  max-width: 120%;
+  filter: brightness(40%);
+}
+
+.Info {
+  position: absolute;
+  top: 50px;
+  left: 15px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.Info__Kicker {
+  color: var(--color-gray-light);
+  font-size: 14px;
+}
+.Info__Title {
+  color: var(--primary-color-white);
+  font-size: 40px;
+  margin: 0 0 10px;
+}
+.Info--Relevant {
+  background-color: var(--primary-color-white);
+  font-size: 14px;
+  padding: 5px;
+  width: 70px;
+  border-radius: 5px;
+}

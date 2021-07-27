@@ -14,7 +14,6 @@ export default function Home() {
   const handleChange = e => {
     setKeyword(e.target.value)
   }
-  console.log(keyword)
 
   return (
     <>
