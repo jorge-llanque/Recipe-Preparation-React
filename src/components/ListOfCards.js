@@ -12,6 +12,8 @@ export default function ListOfCards({cards}) {
         title= {item.recipe.label}
         url={item.recipe.image}
         id={item.recipe.uri}
+        source={item.recipe.source}
+        calories={item.recipe.calories}
       />
       )
     }
