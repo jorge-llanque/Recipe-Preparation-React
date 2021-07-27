@@ -1,12 +1,24 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './styles/SearchResults.css'
 import ListOfCards from '../components/ListOfCards'
 import useResults from '../hooks/useResults'
+import {useLocation} from 'wouter'
 
 export default function SearchResults({params}) {
-  const {keyword} = params
-  const {loading, data} = useResults({keyword})
+  const {keyword, dietParam} = params
+  const {loading, data} = useResults({keyword, dietParam})
+  const [path, pushLocation] = useLocation()
+
+  const handleClick = e => {
+    e.preventDefault()
+    const dietParam = e.target.value
+    pushLocation(`/search/${keyword}/${dietParam}`)
+    console.log(e.target.value)
+  }
+  
   console.log(data)
+  const dietLabels = [{name: "Balanced"}, {name: "High Fiber"}, {name: "High Protein"}, {name: "Low Carb"}, {name: "Low Fat"}, {name: "Low Sodium"} ]
+
   return (
     <>
     {
@@ -15,13 +27,11 @@ export default function SearchResults({params}) {
     : <div>
       <h1>{keyword}</h1>
       <ul className="Diet--Options" >
-        <li>Balanced</li>
-        <li>High Fiber</li>
-        <li>High Protein</li>
-        <li>Low Carb</li>
-        <li>Low Fat</li>
-        <li>Low Sodium</li>
-        
+        {
+          dietLabels.map((label) => (
+            <input onClick={handleClick} type="button" value={label.name} />    
+          ))
+        }
       </ul>
       <ListOfCards cards={data} />
       </div>

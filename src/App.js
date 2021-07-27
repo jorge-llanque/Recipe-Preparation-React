@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="App">
       <Route path="/" component={Home} />
-      <Route path="/search/:keyword" component={SearchResults} />
+      <Route path="/search/:keyword/:dietParam?" component={SearchResults} />
     </div>
   );
 }

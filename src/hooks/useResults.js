@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import getResults from '../services/getResults'
 
-export default function useResults({keyword} = {keyword: null}) {
+export default function useResults({keyword, dietParam} = {keyword: null}) {
   
   const [loading, setLoading] = useState(false)
   const [data, setData] = useState([])
@@ -9,7 +9,8 @@ export default function useResults({keyword} = {keyword: null}) {
   useEffect(() => {
     setLoading(true)
     const keywordToUse = keyword
-    getResults({keyword: keywordToUse})
+    console.log(keywordToUse, dietParam);
+    getResults({keyword: keywordToUse, dietParam})
       .then( data => {
         setData(data)
         setLoading(false)
