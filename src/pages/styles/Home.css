@@ -1,4 +1,6 @@
-
+.Header {
+  padding: 0 15px;
+}
 .Header__Title {
   margin-top: 100px;
   font-family: 'Libre Franklin', sans-serif;
