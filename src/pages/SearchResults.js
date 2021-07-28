@@ -7,10 +7,10 @@ import DietCategory from '../components/DietCategory'
 
 export default function SearchResults({params}) {
   const {keyword, dietParam} = params
-  const {loading, data} = useResults({keyword, dietParam})
+  const {loading, recipes} = useResults({keyword, dietParam})
   
   
-  console.log(data)
+  console.log(recipes)
   
 
   return (
@@ -21,7 +21,7 @@ export default function SearchResults({params}) {
     : <div>
       <h1>{keyword}</h1>
       <DietCategory keyword={keyword} />
-      <ListOfCards cards={data} />
+      <ListOfCards recipes={recipes} />
       </div>
     }    
     </>

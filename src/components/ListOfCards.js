@@ -1,12 +1,12 @@
 import React from 'react'
 import Card from './Card'
 
-export default function ListOfCards({cards}) {
+export default function ListOfCards({recipes}) {
 
   return (
   <div className="List__Cards" >
     {
-      cards.map( item =>
+      recipes.map( item =>
       <Card 
         key={item.recipe.uri}
         title= {item.recipe.label}

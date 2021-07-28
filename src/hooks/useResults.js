@@ -1,21 +1,20 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
+import RecipesContext from '../context/RecipesContext'
 import getResults from '../services/getResults'
 
 export default function useResults({keyword, dietParam} = {keyword: null}) {
-  
   const [loading, setLoading] = useState(false)
-  const [data, setData] = useState([])
+  const {recipes, setRecipes} = useContext(RecipesContext)
 
-  useEffect(() => {
+  useEffect(() => {    
     setLoading(true)
     const keywordToUse = keyword
-    console.log(keywordToUse, dietParam);
     getResults({keyword: keywordToUse, dietParam})
-      .then( data => {
-        setData(data)
+      .then( recipes => {
+        setRecipes(recipes)
         setLoading(false)
       })
-  }, [keyword])
+  }, [keyword, setRecipes])
   
-  return {loading, data}
+  return {loading, recipes}
 }
