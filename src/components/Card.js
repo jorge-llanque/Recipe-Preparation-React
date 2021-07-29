@@ -11,7 +11,7 @@ export default function Card({title, url, source, calories, id}) {
     <>
       <figure className="Card__Container" >
         
-        <img className="Card__Image" src={url}/>
+        <img loading="lazy" className="Card__Image" src={url}/>
         
         <div className="Info" >
           <span className="Info__Kicker">{source}</span>

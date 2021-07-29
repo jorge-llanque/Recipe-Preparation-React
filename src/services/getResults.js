@@ -10,6 +10,7 @@ export default function getResults({keyword, dietParam}) {
     .then(response => {
       const {hits} = response
       if(Array.isArray(hits)){
+        console.log(hits)
         return hits
       }
     })

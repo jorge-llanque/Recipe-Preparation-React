@@ -5,15 +5,17 @@ import RecipeDetail from './pages/RecipeDetail'
 import SearchResults from './pages/SearchResults'
 import './App.css';
 import {RecipesContextProvider} from './context/RecipesContext'
-
+import Layout from './components/Layout'
 
 function App() {
   return (
     <div className="App">
       <RecipesContextProvider>
-        <Route path="/" component={Home} />
-        <Route path="/search/:keyword/:dietParam?" component={SearchResults} />
-        <Route path="/recipe/:id" component={RecipeDetail} />
+        <Layout>
+          <Route path="/" component={Home} />
+          <Route path="/search/:keyword/:dietParam?" component={SearchResults} />
+          <Route path="/recipe/:id" component={RecipeDetail} />
+        </Layout>
       </RecipesContextProvider>
     </div>
   );
