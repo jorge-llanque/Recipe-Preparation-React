@@ -13,7 +13,7 @@ function App() {
       <RecipesContextProvider>
         <Layout>
           <Route path="/" component={Home} />
-          <Route path="/search/:keyword/:dietParam?" component={SearchResults} />
+          <Route path="/search/:keyword" component={SearchResults} />
           <Route path="/recipe/:id" component={RecipeDetail} />
         </Layout>
       </RecipesContextProvider>

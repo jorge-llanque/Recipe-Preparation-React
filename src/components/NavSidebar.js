@@ -3,15 +3,23 @@ import {Navigation} from 'react-minimal-side-navigation';
 import 'react-minimal-side-navigation/lib/ReactMinimalSideNavigation.css';
 import { BiMenuAltLeft } from 'react-icons/bi';
 import './styles/NavSidebar.css'
+import {Link, useLocation, Redirect} from 'wouter'
 
 export default function NavSidebar() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [location, setLocation] = useLocation()
 
   console.log(isSidebarOpen)
 
   const handleSetOpenNavbar = ()=>{
     console.log(isSidebarOpen)
     setIsSidebarOpen(true)
+  }
+
+  const handleSelect = (itemId) => {
+    console.log(itemId)
+    setLocation(itemId)
+    setIsSidebarOpen(false)
   }
 
   return (
@@ -33,15 +41,14 @@ export default function NavSidebar() {
         className={`Navigation--Wrapper ${isSidebarOpen ? "Navigation--isSidebarOpen" : "Navigation--isNotSidebarOpen" } `}
       >
         <Navigation
-            // you can use your own router's api to get pathname
             activeItemId="/home"
             onSelect={({itemId}) => {
-              // maybe push to the route
+              handleSelect(itemId)
             }}
             items={[
               {
                 title: 'Home',
-                itemId: '/home',
+                itemId: '/',
                 elemBefore: () => <BiMenuAltLeft name="inbox" />,
               },
               {
