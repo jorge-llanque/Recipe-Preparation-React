@@ -43,7 +43,9 @@ export default function NavSidebar() {
         <Navigation
             activeItemId="/home"
             onSelect={({itemId}) => {
-              handleSelect(itemId)
+              if(itemId !== undefined){
+                handleSelect(itemId)
+              }
             }}
             items={[
               {
@@ -53,7 +55,6 @@ export default function NavSidebar() {
               },
               {
                 title: 'Meal Type',
-                itemId: '/meal-type',
                 elemBefore: () => <BiMenuAltLeft name="inbox" />,
                 subNav: [
                   {
@@ -85,7 +86,6 @@ export default function NavSidebar() {
               },
               {
                 title: 'Dish Type',
-                itemId: '/dish-type',
                 elemBefore: () => <BiMenuAltLeft name="inbox" />,
                 subNav: [
                   {
