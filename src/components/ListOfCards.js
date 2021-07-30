@@ -1,5 +1,6 @@
 import React from 'react'
 import Card from './Card'
+import {v4 as uuidv4} from 'uuid'
 
 export default function ListOfCards({recipes}) {
 
@@ -8,7 +9,7 @@ export default function ListOfCards({recipes}) {
     {
       recipes.map( item =>
       <Card 
-        key={item.recipe.uri}
+        key={uuidv4()}
         title= {item.recipe.label}
         url={item.recipe.image}
         id={item.recipe.uri}

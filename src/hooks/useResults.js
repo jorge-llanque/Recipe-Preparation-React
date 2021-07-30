@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import RecipesContext from '../context/RecipesContext'
 import getResults from '../services/getResults'
 
@@ -18,7 +18,7 @@ export default function useResults({keyword, mealType} = {keyword: null, mealTyp
         setRecipes(recipes)
         setLoading(false)
       })
-  }, [keyword, keywordToUse, setRecipes])
+  }, [keyword, keywordToUse, setRecipes, dietParam, mealType])
 
   useEffect(() => {
     if(dietParam == null) return

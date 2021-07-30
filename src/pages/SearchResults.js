@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React from 'react'
+import {v4 as uuidv4} from 'uuid'
 import './styles/SearchResults.css'
 import ListOfCards from '../components/ListOfCards'
 import useResults from '../hooks/useResults'
@@ -32,7 +33,7 @@ export default function SearchResults({params}) {
       <ul className="Diet--Options" >
         {
           dietLabels.map((label) => (
-            <input key={label.id} onClick={handleClick} type="button" value={label.name} />    
+            <input key={uuidv4()} onClick={handleClick} type="button" value={label.name} />    
           ))
         }
       </ul>
