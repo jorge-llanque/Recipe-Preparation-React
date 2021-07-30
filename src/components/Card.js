@@ -15,7 +15,7 @@ export default function Card({title, url, source, calories, id}) {
         
         <div className="Info" >
           <span className="Info__Kicker">{source}</span>
-          <h1 className="Info__Title" >{title}</h1>
+          <h1 className="Info__Title" >{decodeURI(title)}</h1>
           <span className="Info--Relevant" >{Math.round(calories)} Kcal</span>
           <Link to={`/recipe/${idFormated}`}>Go</Link>
         </div>

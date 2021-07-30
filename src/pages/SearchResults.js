@@ -4,7 +4,7 @@ import ListOfCards from '../components/ListOfCards'
 import useResults from '../hooks/useResults'
 
 export default function SearchResults({params}) {
-  const {keyword} = params
+  const {keyword, value} = params
   const {loading, recipes, setDietParam} = useResults({keyword})
   
   const dietLabels = [
