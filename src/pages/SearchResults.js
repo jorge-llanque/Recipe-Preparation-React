@@ -29,7 +29,7 @@ export default function SearchResults({params}) {
     loading 
     ? <i>Cargando...</i> 
     : <div>
-      <h1>{keyword}</h1>
+      <h1>{decodeURI(keyword)}</h1>
       <ul className="Diet--Options" >
         {
           dietLabels.map((label) => (

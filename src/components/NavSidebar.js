@@ -63,7 +63,7 @@ export default function NavSidebar() {
                   {
                     
                     title: "breakfast",
-                    itemId: "/meal-type/:breakfast",
+                    itemId: "/meal-type/breakfast",
                     elemBefore: () => <BiMenuAltLeft name="inbox" />,
                   },
                   {
