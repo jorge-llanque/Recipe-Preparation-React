@@ -3,7 +3,7 @@ import { Route } from 'wouter'
 import Home from './pages/Home'
 import RecipeDetail from './pages/RecipeDetail'
 import SearchResults from './pages/SearchResults'
-import BreakfastMealType from './pages/BreakfastMealType'
+import OptionsMealType from './pages/OptionsMealType'
 import DinnerMealType from './pages/DinnerMealType'
 import LunchMealType from './pages/LunchMealType'
 import SnackMealType from './pages/SnackMealType'
@@ -20,11 +20,7 @@ function App() {
           <Route path="/" component={Home} />
           <Route path="/search/:keyword/:mealType?" component={SearchResults} />
           <Route path="/recipe/:id" component={RecipeDetail} />
-          <Route path="/meal-type/breakfast" component={BreakfastMealType}/>
-          <Route path="/meal-type/dinner" component={DinnerMealType}/>
-          <Route path="/meal-type/lunch" component={LunchMealType}/>
-          <Route path="/meal-type/snack" component={SnackMealType}/>
-          <Route path="/meal-type/teatime" component={TeatimeMealType}/>
+          <Route path="/meal-type/:mealType" component={OptionsMealType}/>
 
 
 
