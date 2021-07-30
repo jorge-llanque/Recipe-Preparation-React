@@ -1,9 +1,17 @@
 const APP_KEY = "7a559f6c982b3ea2cc4a7208024f028d"
 const APP_ID = "c9da61d9"
 
-export default function getResults({keyword, dietParam}) {
+export default function getResults({keyword, dietParam, mealType}) {
+  
+  let API_URL = `https://api.edamam.com/api/recipes/v2?type=public&q=${keyword}&app_id=${APP_ID}&app_key=${APP_KEY}`;
 
-  const API_URL = !dietParam ? `https://api.edamam.com/api/recipes/v2?type=public&q=${keyword}&app_id=${APP_ID}&app_key=${APP_KEY}` : `https://api.edamam.com/api/recipes/v2?type=public&q=${keyword}&app_id=${APP_ID}&app_key=${APP_KEY}&diet=${dietParam}`
+  if(dietParam){
+    API_URL = `https://api.edamam.com/api/recipes/v2?type=public&q=${keyword}&app_id=${APP_ID}&app_key=${APP_KEY}&diet=${dietParam}`
+  }else if(mealType) {
+    API_URL = `https://api.edamam.com/api/recipes/v2?type=public&q=${keyword}&app_id=${APP_ID}&app_key=${APP_KEY}&mealType=${mealType}`
+  }else {
+    API_URL = `https://api.edamam.com/api/recipes/v2?type=public&q=${keyword}&app_id=${APP_ID}&app_key=${APP_KEY}`
+  }
 
   return fetch(API_URL)
     .then(res => res.json())

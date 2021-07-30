@@ -2,14 +2,16 @@ import React, { useContext, useEffect, useState } from 'react'
 import RecipesContext from '../context/RecipesContext'
 import getResults from '../services/getResults'
 
-export default function useResults({keyword} = {keyword: null}) {
+export default function useResults({keyword, mealType} = {keyword: null, mealType: null}) {
   const [loading, setLoading] = useState(false)
   const [dietParam, setDietParam] = useState(null)
   const {recipes, setRecipes} = useContext(RecipesContext)
 
   const keywordToUse = keyword
+  console.log(keyword, mealType)
 
-  useEffect(() => {    
+  useEffect(() => {
+    if(mealType || dietParam) return
     setLoading(true)
     getResults({keyword: keywordToUse})
       .then( recipes => {
@@ -25,6 +27,14 @@ export default function useResults({keyword} = {keyword: null}) {
         setRecipes(filteredByDiet)
       })
   }, [keywordToUse, dietParam, setRecipes])
+
+  useEffect(() => {
+    if(mealType == null) return
+    getResults({keyword: keywordToUse, mealType})
+      .then( filteredByMealType => {
+        setRecipes(filteredByMealType)
+      })
+  }, [keywordToUse, mealType,setRecipes])
   
 
   return {loading, recipes, setDietParam}
