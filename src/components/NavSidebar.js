@@ -1,24 +1,20 @@
 import React, { useState } from 'react'
-import {v4 as uuidv4} from 'uuid'
 import {Navigation} from 'react-minimal-side-navigation';
 import 'react-minimal-side-navigation/lib/ReactMinimalSideNavigation.css';
-import { BiMenuAltLeft } from 'react-icons/bi';
 import './styles/NavSidebar.css'
+import { BiMenuAltLeft } from 'react-icons/bi';
 import {useLocation} from 'wouter'
 
+
 export default function NavSidebar() {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false)
   const [location, setLocation] = useLocation()
 
-  console.log(isSidebarOpen)
-
   const handleSetOpenNavbar = ()=>{
-    console.log(isSidebarOpen)
     setIsSidebarOpen(true)
   }
 
   const handleSelect = (itemId) => {
-    console.log(itemId)
     setLocation(itemId)
     setIsSidebarOpen(false)
   }
@@ -44,56 +40,49 @@ export default function NavSidebar() {
         <Navigation
             activeItemId="/home"
             onSelect={({itemId}) => {
-              if(itemId !== undefined){
+              if(itemId){
                 handleSelect(itemId)
               }
             }}
+
             items={[
               {
-                
                 title: 'Home',
                 itemId: '/',
                 elemBefore: () => <BiMenuAltLeft name="inbox" />,
               },
               {
-                
                 title: 'Meal Type',
                 elemBefore: () => <BiMenuAltLeft name="inbox" />,
                 subNav: [
                   {
-                    
-                    title: "breakfast",
+                    title: "Breakfast",
                     itemId: "/meal-type/breakfast",
                     elemBefore: () => <BiMenuAltLeft name="inbox" />,
                   },
                   {
-                    
-                    title: "dinner",
+                    title: "Dinner",
                     itemId: "/meal-type/dinner",
                     elemBefore: () => <BiMenuAltLeft name="inbox" />,
                   },
                   {
-                    
-                    title: "lunch",
+                    title: "Lunch",
                     itemId: "/meal-type/lunch",
                     elemBefore: () => <BiMenuAltLeft name="inbox" />,
                   },
                   {
-                    
-                    title: "snack",
+                    title: "Snack",
                     itemId: "/meal-type/snack",
                     elemBefore: () => <BiMenuAltLeft name="inbox" />,
                   },
                   {
-                    
-                    title: "teatime",
+                    title: "Tea Time",
                     itemId: "/meal-type/teatime",
                     elemBefore: () => <BiMenuAltLeft name="inbox" />,
                   }
                 ]
               },
               {
-                
                 title: 'Dish Type',
                 elemBefore: () => <BiMenuAltLeft name="inbox" />,
                 subNav: [
@@ -104,19 +93,16 @@ export default function NavSidebar() {
                     elemBefore: () => <BiMenuAltLeft name="inbox" />,
                   },
                   {
-                    
-                    title: "Bread",
+                    title: "Breads",
                     itemId: "/dish-type/bread",
                     elemBefore: () => <BiMenuAltLeft name="inbox" />,
                   },
                   {
-                    
                     title: "Cereals",
                     itemId: "/dish-type/cereals",
                     elemBefore: () => <BiMenuAltLeft name="inbox" />,
                   },
                   {
-                    
                     title: "Desserts",
                     itemId: "/dish-type/desserts",
                     elemBefore: () => <BiMenuAltLeft name="inbox" />,
@@ -130,7 +116,6 @@ export default function NavSidebar() {
                 ]
               },
               {
-                
                 title: 'Healthy Foods',
                 itemId: '/healthy-meals/food',
                 elemBefore: () => <BiMenuAltLeft name="inbox" />,

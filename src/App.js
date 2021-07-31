@@ -4,9 +4,10 @@ import Home from './pages/Home'
 import RecipeDetail from './pages/RecipeDetail'
 import SearchResults from './pages/SearchResults'
 import OptionsAndCategories from './pages/OptionsAndCategories'
-import './App.css';
+import './App.css'
 import {RecipesContextProvider} from './context/RecipesContext'
 import Layout from './components/Layout'
+
 
 function App() {
   return (

@@ -4,6 +4,7 @@ import './styles/SearchResults.css'
 import ListOfCards from '../components/ListOfCards'
 import useResults from '../hooks/useResults'
 
+
 export default function SearchResults({params}) {
   const {keyword, type} = params
   const {loading, recipes, setDietParam} = useResults({keyword, type})
@@ -19,7 +20,6 @@ export default function SearchResults({params}) {
   const handleClick = e => {
     e.preventDefault()
     let dietParam = e.target.value
-    console.log(dietParam)
     return setDietParam( dietParam )
   }
   

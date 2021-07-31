@@ -11,8 +11,8 @@ export default function ListOfCards({recipes}) {
       <Card 
         key={uuidv4()}
         title= {item.recipe.label}
-        url={item.recipe.image}
-        id={item.recipe.uri}
+        urlImage={item.recipe.image}
+        uri={item.recipe.uri}
         source={item.recipe.source}
         calories={item.recipe.calories}
       />
