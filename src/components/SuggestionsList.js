@@ -26,7 +26,7 @@ const [path, pushLocation] = useLocation()
 
   const handleOnClick = (e) => {
     const keyword = e.target.value
-    pushLocation(`/search/${keyword}/${mealType}`)
+    pushLocation(`/search/${keyword}/${element.keyword}`)
   }
 
   return (
@@ -36,7 +36,7 @@ const [path, pushLocation] = useLocation()
        
         <ul>
         {
-          titleList.map( item =>(
+          element.titleList.map( item =>(
             <input key={uuidv4()} type="button" onClick={handleOnClick} value={item.name} />
           ))
         }

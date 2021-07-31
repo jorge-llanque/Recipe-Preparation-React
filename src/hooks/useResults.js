@@ -2,23 +2,23 @@ import { useContext, useEffect, useState } from 'react'
 import RecipesContext from '../context/RecipesContext'
 import getResults from '../services/getResults'
 
-export default function useResults({keyword, mealType} = {keyword: null, mealType: null}) {
+export default function useResults({keyword, type} = {keyword: null, type: null}) {
   const [loading, setLoading] = useState(false)
   const [dietParam, setDietParam] = useState(null)
   const {recipes, setRecipes} = useContext(RecipesContext)
 
   const keywordToUse = keyword
-  console.log(keyword, mealType)
+  console.log(keyword, type)
 
   useEffect(() => {
-    if(mealType || dietParam) return
+    if(type || dietParam) return
     setLoading(true)
     getResults({keyword: keywordToUse})
       .then( recipes => {
         setRecipes(recipes)
         setLoading(false)
       })
-  }, [keyword, keywordToUse, setRecipes, dietParam, mealType])
+  }, [keyword, keywordToUse, setRecipes, dietParam, type])
 
   useEffect(() => {
     if(dietParam == null) return
@@ -29,12 +29,12 @@ export default function useResults({keyword, mealType} = {keyword: null, mealTyp
   }, [keywordToUse, dietParam, setRecipes])
 
   useEffect(() => {
-    if(mealType == null) return
-    getResults({keyword: keywordToUse, mealType})
+    if(type == null) return
+    getResults({keyword: keywordToUse, type})
       .then( filteredByMealType => {
         setRecipes(filteredByMealType)
       })
-  }, [keywordToUse, mealType,setRecipes])
+  }, [keywordToUse, type,setRecipes])
   
 
   return {loading, recipes, setDietParam}
