@@ -6,8 +6,8 @@ import useResults from '../hooks/useResults'
 
 
 export default function SearchResults({params}) {
-  const {keyword, type} = params
-  const {loading, recipes, setDietParam} = useResults({keyword, type})
+  const {keyword, type, keywordType} = params
+  const {loading, recipes, setDietParam} = useResults({keyword, type, keywordType})
   
   const dietLabels = [
     {id: 1, name: "balanced"}, 

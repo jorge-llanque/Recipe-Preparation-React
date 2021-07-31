@@ -5,7 +5,7 @@ import getIdRecipeFromUri from "../utils/getIdRecipeFromUri";
 export default function Card(params) {
 
   const {title, urlImage, source, calories, uri} = params
-  console.log(params)
+  
   let idRecipe = getIdRecipeFromUri(uri)
 
   return (

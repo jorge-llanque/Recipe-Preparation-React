@@ -15,7 +15,7 @@ function App() {
       <RecipesContextProvider>
         <Layout>
           <Route path="/" component={Home} />
-          <Route path="/search/:keyword/:categoryType?" component={SearchResults} />
+          <Route path="/search/:keyword/:type?/:keywordType?" component={SearchResults} />
           <Route path="/recipe/:id" component={RecipeDetail} />
           <Route path="/meal-type/:mealType" component={OptionsAndCategories}/>
           <Route path="/dish-type/:dishType" component={OptionsAndCategories}/>
