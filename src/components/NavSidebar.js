@@ -99,8 +99,8 @@ export default function NavSidebar() {
                 subNav: [
                   {
                     
-                    title: "Biscuits and cookies",
-                    itemId: "/dish-type/biscuits&cookies",
+                    title: "Biscuits",
+                    itemId: "/dish-type/biscuits",
                     elemBefore: () => <BiMenuAltLeft name="inbox" />,
                   },
                   {
@@ -117,12 +117,6 @@ export default function NavSidebar() {
                   },
                   {
                     
-                    title: "Condiments and sauces",
-                    itemId: "/dish-type/condiments&sauces",
-                    elemBefore: () => <BiMenuAltLeft name="inbox" />,
-                  },
-                  {
-                    
                     title: "Desserts",
                     itemId: "/dish-type/desserts",
                     elemBefore: () => <BiMenuAltLeft name="inbox" />,
@@ -132,68 +126,7 @@ export default function NavSidebar() {
                     title: "Drinks",
                     itemId: "/dish-type/drinks",
                     elemBefore: () => <BiMenuAltLeft name="inbox" />,
-                  },
-                  {
-                    
-                    title: "Main course",
-                    itemId: "/dish-type/main-course",
-                    elemBefore: () => <BiMenuAltLeft name="inbox" />,
-                  },
-                  {
-                    
-                    title: "Pancake",
-                    itemId: "/dish-type/pancake",
-                    elemBefore: () => <BiMenuAltLeft name="inbox" />,
-                  },
-                  {
-                    
-                    title: "Preps",
-                    itemId: "/dish-type/preps",
-                    elemBefore: () => <BiMenuAltLeft name="inbox" />,
-                  },
-                  {
-                    
-                    title: "Preserve",
-                    itemId: "/dish-type/preserve",
-                    elemBefore: () => <BiMenuAltLeft name="inbox" />,
-                  },
-                  {
-                    
-                    title: "Salad",
-                    itemId: "/dish-type/salad",
-                    elemBefore: () => <BiMenuAltLeft name="inbox" />,
-                  },
-                  {
-                    
-                    title: "Sandwiches",
-                    itemId: "/dish-type/sandwiches",
-                    elemBefore: () => <BiMenuAltLeft name="inbox" />,
-                  },
-                  {
-                    
-                    title: "Side dish",
-                    itemId: "/dish-type/side-dish",
-                    elemBefore: () => <BiMenuAltLeft name="inbox" />,
-                  },
-                  {
-                    
-                    title: "Soup",
-                    itemId: "/dish-type/soup",
-                    elemBefore: () => <BiMenuAltLeft name="inbox" />,
-                  },
-                  {
-                    
-                    title: "Starter",
-                    itemId: "/dish-type/starter",
-                    elemBefore: () => <BiMenuAltLeft name="inbox" />,
-                  },
-                  {
-                    
-                    title: "Sweets",
-                    itemId: "/dish-type/sweets",
-                    elemBefore: () => <BiMenuAltLeft name="inbox" />,
                   }
-
                 ]
               },
               {
