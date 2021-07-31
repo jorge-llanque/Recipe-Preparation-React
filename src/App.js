@@ -18,6 +18,7 @@ function App() {
           <Route path="/recipe/:id" component={RecipeDetail} />
           <Route path="/meal-type/:mealType" component={OptionsAndCategories}/>
           <Route path="/dish-type/:dishType" component={OptionsAndCategories}/>
+          <Route path="/healthy-meals/:healthyType" component={OptionsAndCategories}/>
         </Layout>
       </RecipesContextProvider>
     </div>

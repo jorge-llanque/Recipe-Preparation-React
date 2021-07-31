@@ -147,5 +147,19 @@ export default [
       ]
     },
   ]
+ },{
+  type: "healthyType",
+  content: [
+    { keyword: "food",
+      titleList: [
+      { name:"alcohol-free"},
+      { name:"pork-free"},
+      { name:"celery-free"},
+      { name:"crustacean-free"},
+      { name:"gluten-free"},
+      { name:"vegetarian"}
+      ]
+    }
+  ]
  }
 ]

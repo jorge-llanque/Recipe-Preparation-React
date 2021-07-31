@@ -11,6 +11,8 @@ export default function getResults({keyword, dietParam, type}) {
     API_URL = `https://api.edamam.com/api/recipes/v2?type=public&q=${keyword}&app_id=${APP_ID}&app_key=${APP_KEY}&mealType=${type}`
   }else if(type && type == "dishType"){
     API_URL = `https://api.edamam.com/api/recipes/v2?type=public&q=${keyword}&app_id=${APP_ID}&app_key=${APP_KEY}&dishType=${type}`
+  }else if(type && type == "healthyType"){  
+    API_URL = `https://api.edamam.com/api/recipes/v2?type=public&q=${keyword}&app_id=${APP_ID}&app_key=${APP_KEY}&health=${type}`
   }else {
     API_URL = `https://api.edamam.com/api/recipes/v2?type=public&q=${keyword}&app_id=${APP_ID}&app_key=${APP_KEY}`
   }

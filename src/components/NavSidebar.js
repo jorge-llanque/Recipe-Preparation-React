@@ -131,8 +131,8 @@ export default function NavSidebar() {
               },
               {
                 
-                title: 'Healthy Meals',
-                itemId: '/healthy-meals',
+                title: 'Healthy Foods',
+                itemId: '/healthy-meals/food',
                 elemBefore: () => <BiMenuAltLeft name="inbox" />,
               }
             ]}
