@@ -11,9 +11,9 @@ const [path, pushLocation] = useLocation()
 
   let element
   suggestionsList.forEach( item => {
-     if(item.type == type){
+     if(item.type === type){
         item.content.forEach( elem => {
-          if(elem.keyword == keywordType){
+          if(elem.keyword === keywordType){
             element = elem
           }
         })

@@ -34,7 +34,7 @@ export default function useResults({keyword, type, keywordType} = {keyword: null
         .then( filteredByMealType => {
           setRecipes(filteredByMealType)
         })
-    }, [keywordToUse, type,setRecipes])
+    }, [keywordToUse, type,setRecipes, keywordType])
 
   
 

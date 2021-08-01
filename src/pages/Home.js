@@ -18,6 +18,7 @@ export default function Home() {
 
   return (
     <>
+      <div className="Background"></div>
       <header className="Header" >
         <h1 className="Header__Title" >Healthy habits for a better life</h1>
         <p className="Header__Subtitle" >The pocket nutritionist app that will help you reach your health and weight goals</p>
