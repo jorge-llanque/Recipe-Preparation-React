@@ -2,6 +2,9 @@ import React from 'react'
 import { Link } from 'wouter'
 import './styles/Card.css'
 import getIdRecipeFromUri from "../utils/getIdRecipeFromUri";
+import Skeleton from 'react-loading-skeleton'
+
+
 export default function Card(params) {
 
   const {title, urlImage, source, calories, uri, quantityIngredients} = params
@@ -12,7 +15,11 @@ export default function Card(params) {
     <>
       <figure className="Card__Container" >
         <div className="Card__Image-Polaroid" >
-          <img loading="lazy" className="Card__Image" src={urlImage} alt="it-is-a-card" />
+          {!urlImage 
+              ? <Skeleton className="Card__Image"/> 
+              : <img className="Card__Image" src={urlImage} alt="it-is-a-card" />
+          }
+          
         </div>
         <div className="Info" >
           <span className="Info__Kicker">{source} Recommend</span>

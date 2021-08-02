@@ -1,0 +1,5 @@
+.List__Cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
