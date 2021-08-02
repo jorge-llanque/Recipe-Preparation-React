@@ -1,4 +1,4 @@
-.Back--Wrapper {
+.Back-Wrapper {
   position: fixed;
   top: 0px;
   right: 0px;
@@ -21,16 +21,17 @@
 .Menu__Button {
   position: absolute;
   border: none;
-  top: 20px;
-  left: 20px;
+  top: 10px;
+  left: 10px;
   background-color: transparent;
+  z-index: 1;
 }
-.Icon--Menu {
+.Icon-Menu {
   width: 3rem;
   height: 3rem;
   color: var(--color-gray-light);
 }
-.Navigation--Wrapper {
+.Navigation-Wrapper {
   position: fixed;
   top: 0px;
   bottom: 0px;
@@ -50,7 +51,7 @@
   transform: translateX(0);
 }
 @media (min-width: 1024px) { 
-  .Navigation--Wrapper {
+  .Navigation-Wrapper {
     position: static;
     top: 0px;
     right: 0px;
@@ -62,10 +63,7 @@
   }
 }
 
-
-/*========== NAV ==========*/
-
-.nav__container {
+.Nav__Container {
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -74,57 +72,50 @@
 }
 
 /* For Google Chrome and others */
-.nav__container::-webkit-scrollbar {
+.Nav__Container::-webkit-scrollbar {
   display: none;
 }
 
-.nav__logo {
-  background-color: rgb(255, 255, 255);
+.Nav__Logo {
+  background-color: rgb(243, 242, 242);
   height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 20px;
-  border-bottom: 1px solid var(--color-green-dark);
 }
-.nav__logo-name {
+.Nav__Logo-Name {
   font-family: 'Libre Franklin', sans-serif;
   font-size: 18px;
   font-weight: 800;
   color: var(--color-green-dark);
 }
-.nav__list, 
-.nav__items {
+.Nav__List, 
+.Nav__Items {
   display: grid;
 }
-
-.nav__list {
+.Nav__List {
   row-gap: 2.5rem;
+  padding: 10px;
 }
-
-.nav__items {
+.Nav__Items {
   row-gap: 1rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
+
 }
-.nav__link {
+.Nav__Link {
   height: 35px;
   display: flex;
   align-items: center;
   color: var(--text-color);
   text-decoration: none;
-  border-radius: 5px;
 }
-
-
-
-.nav__icon {
+.Nav__Icon {
   font-size: 1.2rem;
   margin-right: .5rem;
   margin-left: .5rem;
 }
 
-.nav__name {
+.Nav__Name {
   font-size: var(--small-font-size);
   font-weight: var(--font-medium);
   white-space: nowrap;
@@ -132,47 +123,45 @@
 }
 
 /* Dropdown */
-.nav__dropdown {
+.Nav__Dropdown {
   overflow: hidden;
   max-height: 35px;
   transition: .4s ease-in-out;
   transition-duration: .3s;
 }
-
-.nav__dropdown-collapse {
-  background-color: var(--first-color-light);
+.Nav__Dropdown-Collapse {
+  background-color: #f0f0f0;
 }
-
-.nav__dropdown-content {
+.Nav__Dropdown-Content {
   display: grid;
   row-gap: .5rem;
   padding: .75rem 2.5rem .75rem 2.2rem;
 }
-
-.nav__dropdown-item {
+.Nav__Dropdown-Item {
   font-size: var(--smaller-font-size);
   font-weight: var(--font-medium);
   color: var(--text-color);
   text-align: left;
   text-decoration: none;
+  padding-left: 5px;
 }
 
-.nav__dropdown-item:hover {
+.Nav__Dropdown-Item:hover {
   color: #d4aa20;
 }
 
-.nav__dropdown-icon {
+.Nav__Dropdown-Icon {
   margin-left: auto;
   transition: .4s;
 }
 
 /* Show dropdown collapse */
-.nav__dropdown:hover {
+.Nav__Dropdown:hover {
   max-height: 100rem;
 }
 
 /* Rotate icon arrow */
-.nav__dropdown:hover .nav__dropdown-icon {
+.Nav__Dropdown:hover .Nav__Dropdown-Icon {
   transform: rotate(180deg);
 }
 
@@ -184,6 +173,9 @@
 /*===== Active link =====*/
 .active {
   color: #d4aa20;
+  background-color: rgb(231, 230, 230);
+  border-radius: 5px;
+  font-weight: 700;
 }
 
 /* ========== MEDIA QUERIES ==========*/
@@ -224,18 +216,18 @@
     padding: 1.2rem 1.5rem 0;
     width: 68px; /* Reduced navbar */
   }
-  .nav__items {
+  .Nav__Items {
     row-gap: 1.7rem;
   }
-  .nav__icon {
+  .Nav__Icon {
     font-size: 1.3rem;
   }
 
   /* Element opacity */
-  .nav__logo-name, 
-  .nav__name, 
+  .Nav__Logo-Name, 
+  .Nav__Name, 
   .nav__subtitle, 
-  .nav__dropdown-icon {
+  .Nav__Dropdown-Icon {
     opacity: 0;
     transition: .3s;
   }
@@ -247,16 +239,16 @@
   }
   
   /* Visible elements */
-  .nav:hover .nav__logo-name {
+  .nav:hover .Nav__Logo-Name {
     opacity: 1;
   }
   .nav:hover .nav__subtitle {
     opacity: 1;
   }
-  .nav:hover .nav__name {
+  .nav:hover .Nav__Name {
     opacity: 1;
   }
-  .nav:hover .nav__dropdown-icon {
+  .nav:hover .Nav__Dropdown-Icon {
     opacity: 1;
   }
 }

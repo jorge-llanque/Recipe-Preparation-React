@@ -20,46 +20,48 @@ export default function RecipeDetail({params}) {
         </div>
         <div className="Info-Detail" >
           <span className="Info__Kicker-Detail">{recipe.source} Recommend</span>
+          <div className="Info-Description" >
               <h1 className="Info__Title-Detail" >{recipe.label}</h1>
-          <div className="Info__Relevant-Detail">
-            <div className="Info__Relevant-Box" >
-              <span>CALORIES</span>
-              <div>
-                <strong>{Math.round(recipe.calories)}</strong>
-                <span> Kcal</span>
+              <div className="Info__Relevant-Detail">
+                <div className="Info__Relevant-Box" >
+                  <span>CALORIES</span>
+                  <div>
+                    <strong>{Math.round(recipe.calories)}</strong>
+                    <span> Kcal</span>
+                  </div>
+                </div>
+                <div className="Info__Relevant-Box" >
+                  <span>CARB</span>
+                  <div>
+                    <strong>{Math.round(recipe.totalNutrients.CHOCDF.quantity)}</strong>
+                    <span> g</span>
+                  </div>
+                </div>
+                <div className="Info__Relevant-Box" >
+                  <span>FAT</span>
+                  <div>
+                  <strong>{Math.round(recipe.totalNutrients.FAT.quantity)}</strong>
+                  <span> g</span>
+                  </div>
+                </div>
+                <div className="Info__Relevant-Box" >
+                  <span>PROTS</span>
+                  <div>
+                    <strong>{Math.round(recipe.totalNutrients.PROCNT.quantity)}</strong>
+                    <span> g</span>
+                  </div>
+                </div>
               </div>
-            </div>
-            <div className="Info__Relevant-Box" >
-              <span>CARB</span>
-              <div>
-                <strong>{Math.round(recipe.totalNutrients.CHOCDF.quantity)}</strong>
-                <span> g</span>
+              <div className="Info__IngredientsList">
+                <h3>Ingredients</h3>
+                <ul>
+                  {
+                  recipe.ingredientLines.map( ingredient => 
+                  <li key={uuidv4()} >{ingredient}</li>
+                  )
+                  }
+                </ul>
               </div>
-            </div>
-            <div className="Info__Relevant-Box" >
-              <span>FAT</span>
-              <div>
-              <strong>{Math.round(recipe.totalNutrients.FAT.quantity)}</strong>
-              <span> g</span>
-              </div>
-            </div>
-            <div className="Info__Relevant-Box" >
-              <span>PROTS</span>
-              <div>
-                <strong>{Math.round(recipe.totalNutrients.PROCNT.quantity)}</strong>
-                <span> g</span>
-              </div>
-            </div>
-          </div>
-          <div className="Info__IngredientsList">
-            <h3>Ingredients</h3>
-            <ul>
-              {
-              recipe.ingredientLines.map( ingredient => 
-              <li key={uuidv4()} >{ingredient}</li>
-              )
-              }
-            </ul>
           </div>
         </div>
      </div>

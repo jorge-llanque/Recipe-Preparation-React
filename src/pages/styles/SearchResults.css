@@ -1,5 +1,7 @@
 .SearchResults__Container {
-  overflow: hidden;  
+  overflow: hidden;
+  padding: 15px;
+  margin-top: 30px;
 }
 .Diet__Options{
   display: flex;
@@ -7,15 +9,17 @@
   overflow: scroll;
   transition-duration: 2s;
   transition-property: overflow;
+  margin: 15px 0;
 }
-.Diet__Options::-webkit-scrollbar {display: none;}
+.Diet__Options::-webkit-scrollbar {
+  display: none;
+}
 .Diet__Options-Item {
   margin: 2px;
-  border-radius: 5px;
   border: none;
   color: var(--color-green-dark);
-  background-color: #F0F5F5;
+  background-color: #ecf0f0;
   font-weight: 700;
   text-transform: capitalize;
-  
+  padding: 0 10px;
 }

@@ -1,9 +1,24 @@
-.Header {
-  padding: 0 15px;
+.Home {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+  padding: 15px;
+}
+.Background-Square {
+  position: absolute;
+  top: 130px;
+  left: 130px;
+  width: 300px;
+  height: 300px;
+  border-radius: 20px;
+  background-color: var(--yellow-color-dark);
+  z-index: -1;
+  transform: rotate(25deg);
 }
 .Header__Title {
   margin-top: 100px;
-  font-family: 'Libre Franklin', sans-serif;
+  font-family: var(--title-font);
   font-size: 60px;
   letter-spacing: 0.2px;
   color: var(--color-green-dark);
@@ -20,7 +35,7 @@
 .Form--Search input {
   width: 250px;
   height: 40px;
-  border: 1px solid var(--color-gray-light);
+  border:hidden;
   border-radius: 10px;
   outline: none;
   padding: 0 10px;
@@ -28,15 +43,5 @@
   letter-spacing: 1.8px;
   cursor: pointer;
   color: var(--color-green-dark);
-}
-.Background {
-  position: absolute;
-  top: 130px;
-  left: 130px;
-  width: 300px;
-  height: 300px;
-  border-radius: 20px;
-  background-color: #F4DC90;
-  z-index: -1;
-  transform: rotate(25deg);
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }

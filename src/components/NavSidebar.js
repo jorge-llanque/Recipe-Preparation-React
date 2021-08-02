@@ -1,14 +1,21 @@
 import React, { useState } from 'react'
 import './styles/NavSidebar.css'
-import { BiMenuAltLeft, BiHomeAlt, BiFoodMenu, BiDish, BiDumbbell, BiChevronDown } from 'react-icons/bi';
+import { 
+  BiMenuAltLeft, 
+  BiHomeAlt, 
+  BiFoodMenu, 
+  BiDish, 
+  BiDumbbell, 
+  BiChevronDown } from 'react-icons/bi';
 import {Link, useRoute} from 'wouter'
+
 
 
 export default function NavSidebar() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false)
 
   const handleSetOpenNavbar = ()=>{
-    setIsSidebarOpen(true)
+    setIsSidebarOpen(!isSidebarOpen)
   }
 
   const handleClick = () => {
@@ -19,7 +26,7 @@ export default function NavSidebar() {
     const [isActive] = useRoute(props.href)
     return (
       <Link {...props} >
-         <a className={isActive ? "active" : "" }>{props.children}</a>
+         <a className={isActive ? "active Nav__Link Nav__Dropdown-Item" : "Nav__Link Nav__Dropdown-Item" }>{props.children}</a>
       </Link>
     )
   }
@@ -27,72 +34,72 @@ export default function NavSidebar() {
   return (
     <>
       <div
-        onClick={() => setIsSidebarOpen(false)}
-        className={`Back--Wrapper ${
+        onClick={handleSetOpenNavbar}
+        className={`Back-Wrapper ${
           isSidebarOpen ? "Back--isSidebarOpen" : "Back--isNotSidebarOpen"
         }`}
       />
 
       <div>
         <button className="Menu__Button" onClick={handleSetOpenNavbar} type="button" >
-          <BiMenuAltLeft name="burger" className="Icon--Menu" />
+          <BiMenuAltLeft className="Icon-Menu" />
         </button>
       </div>
 
       <div
-        className={`Navigation--Wrapper ${isSidebarOpen ? "Navigation--isSidebarOpen" : "Navigation--isNotSidebarOpen" } `}
+        className={`Navigation-Wrapper ${isSidebarOpen ? "Navigation--isSidebarOpen" : "" } `}
       >
-            <nav className="nav__container">
-                    <div className="nav__logo">
-                        <span className="nav__logo-name">RECIPE NUTRITION</span>
+            <nav className="Nav__Container">
+                    <div className="Nav__Logo">
+                        <span className="Nav__Logo-Name">RECIPE NUTRITION</span>
                     </div>
     
-                    <div className="nav__list">
-                        <div className="nav__items">
-                            <ActiveLink href="/" className="nav__link" onClick={handleClick} >
-                              <BiHomeAlt className="nav__icon" />
-                                <span className="nav__name">Home</span>
+                    <div className="Nav__List">
+                        <div className="Nav__Items">
+                            <ActiveLink href="/" className="Nav__Link" onClick={handleClick} >
+                              <BiHomeAlt className="Nav__Icon" />
+                                <span className="Nav__Name">Home</span>
                             </ActiveLink>
                             
-                            <div className="nav__dropdown">
-                              <div className="nav__link">
-                                  <BiFoodMenu className="nav__icon" />
-                                  <span className="nav__name">Meal Type</span>
-                                  <BiChevronDown className='nav__icon nav__dropdown-icon'/>
+                            <div className="Nav__Dropdown">
+                              <div className="Nav__Link">
+                                  <BiFoodMenu className="Nav__Icon" />
+                                  <span className="Nav__Name">Meal Type</span>
+                                  <BiChevronDown className='Nav__Icon Nav__Dropdown-Icon'/>
                               </div>
 
-                              <div className="nav__dropdown-collapse">
-                                  <div className="nav__dropdown-content">
-                                      <ActiveLink href="/meal-type/breakfast" className="nav__dropdown-item" onClick={handleClick}>Breakfast</ActiveLink>
-                                      <ActiveLink href="/meal-type/dinner" className="nav__dropdown-item" onClick={handleClick}>Dinner</ActiveLink>
-                                      <ActiveLink href="/meal-type/lunch" className="nav__dropdown-item" onClick={handleClick}>Lunch</ActiveLink>
-                                      <ActiveLink href="/meal-type/snack" className="nav__dropdown-item" onClick={handleClick}>Snack</ActiveLink>
-                                      <ActiveLink href="/meal-type/teatime" className="nav__dropdown-item" onClick={handleClick}>Tea Time</ActiveLink>
+                              <div className="Nav__Dropdown-Collapse">
+                                  <div className="Nav__Dropdown-Content">
+                                      <ActiveLink href="/meal-type/breakfast" className="Nav__Dropdown-Item" onClick={handleClick}>Breakfast</ActiveLink>
+                                      <ActiveLink href="/meal-type/dinner" className="Nav__Dropdown-Item" onClick={handleClick}>Dinner</ActiveLink>
+                                      <ActiveLink href="/meal-type/lunch" className="Nav__Dropdown-Item" onClick={handleClick}>Lunch</ActiveLink>
+                                      <ActiveLink href="/meal-type/snack" className="Nav__Dropdown-Item" onClick={handleClick}>Snack</ActiveLink>
+                                      <ActiveLink href="/meal-type/teatime" className="Nav__Dropdown-Item" onClick={handleClick}>Tea Time</ActiveLink>
                                   </div>
                               </div>
                             </div>
 
-                            <div className="nav__dropdown">
-                              <div to="/" className="nav__link">
-                                  <BiDish className="nav__icon" />
-                                  <span className="nav__name">Dish Type</span>
-                                  <i className='bx bx-chevron-down nav__icon nav__dropdown-icon'><BiChevronDown /></i>
+                            <div className="Nav__Dropdown">
+                              <div to="/" className="Nav__Link">
+                                  <BiDish className="Nav__Icon" />
+                                  <span className="Nav__Name">Dish Type</span>
+                                  <i className='Nav__Icon Nav__Dropdown-Icon'><BiChevronDown /></i>
                               </div>
 
-                              <div className="nav__dropdown-collapse">
-                                  <div className="nav__dropdown-content">
-                                      <ActiveLink href="/dish-type/biscuits" className="nav__dropdown-item" onClick={handleClick}>Biscuits</ActiveLink>
-                                      <ActiveLink href="/dish-type/bread" className="nav__dropdown-item" onClick={handleClick}>Breads</ActiveLink>
-                                      <ActiveLink href="/dish-type/cereals" className="nav__dropdown-item" onClick={handleClick}>Cereals</ActiveLink>
-                                      <ActiveLink href="/dish-type/desserts" className="nav__dropdown-item" onClick={handleClick}>Desserts</ActiveLink>
-                                      <ActiveLink href="/dish-type/drinks" className="nav__dropdown-item" onClick={handleClick}>Drinks</ActiveLink>
+                              <div className="Nav__Dropdown-Collapse">
+                                  <div className="Nav__Dropdown-Content">
+                                      <ActiveLink href="/dish-type/biscuits" className="Nav__Dropdown-Item" onClick={handleClick}>Biscuits</ActiveLink>
+                                      <ActiveLink href="/dish-type/bread" className="Nav__Dropdown-Item" onClick={handleClick}>Breads</ActiveLink>
+                                      <ActiveLink href="/dish-type/cereals" className="Nav__Dropdown-Item" onClick={handleClick}>Cereals</ActiveLink>
+                                      <ActiveLink href="/dish-type/desserts" className="Nav__Dropdown-Item" onClick={handleClick}>Desserts</ActiveLink>
+                                      <ActiveLink href="/dish-type/drinks" className="Nav__Dropdown-Item" onClick={handleClick}>Drinks</ActiveLink>
                                   </div>
                               </div>
                             </div>
 
-                            <ActiveLink href="/healthy-meals/food" className="nav__link" onClick={handleClick}>
-                              <BiDumbbell className="nav__icon" />
-                                <span className="nav__name">Healthy Foods</span>
+                            <ActiveLink href="/healthy-meals/food" className="Nav__Link" onClick={handleClick}>
+                              <BiDumbbell className="Nav__Icon" />
+                                <span className="Nav__Name">Healthy Foods</span>
                             </ActiveLink>
                             
                          </div>

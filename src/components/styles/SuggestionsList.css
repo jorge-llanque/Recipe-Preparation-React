@@ -1,7 +1,9 @@
-.SuggestionList ul {
-  margin-top: 100px;
+.SuggestionList {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-
 .SuggestionList__Card {
   list-style: none;
   width: 190px;
