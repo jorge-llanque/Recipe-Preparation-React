@@ -20,6 +20,10 @@ export default function NavSidebar() {
     setIsSidebarOpen(false)
   }
 
+  const handleClick = () => {
+    setIsSidebarOpen(!isSidebarOpen)
+  }
+
   return (
     <>
       <div
@@ -45,7 +49,7 @@ export default function NavSidebar() {
     
                     <div className="nav__list">
                         <div className="nav__items">
-                            <Link to="/" className="nav__link active">
+                            <Link to="/" className="nav__link active" onClick={handleClick} >
                               <BiHomeAlt className="nav__icon" />
                                 <span className="nav__name">Home</span>
                             </Link>
@@ -59,11 +63,11 @@ export default function NavSidebar() {
 
                               <div className="nav__dropdown-collapse">
                                   <div className="nav__dropdown-content">
-                                      <Link to="/meal-type/breakfast" className="nav__dropdown-item">Breakfast</Link>
-                                      <Link to="/meal-type/dinner" className="nav__dropdown-item">Dinner</Link>
-                                      <Link to="/meal-type/lunch" className="nav__dropdown-item">Lunch</Link>
-                                      <Link to="/meal-type/snack" className="nav__dropdown-item">Snack</Link>
-                                      <Link to="/meal-type/teatime" className="nav__dropdown-item">Tea Time</Link>
+                                      <Link to="/meal-type/breakfast" className="nav__dropdown-item" onClick={handleClick}>Breakfast</Link>
+                                      <Link to="/meal-type/dinner" className="nav__dropdown-item" onClick={handleClick}>Dinner</Link>
+                                      <Link to="/meal-type/lunch" className="nav__dropdown-item" onClick={handleClick}>Lunch</Link>
+                                      <Link to="/meal-type/snack" className="nav__dropdown-item" onClick={handleClick}>Snack</Link>
+                                      <Link to="/meal-type/teatime" className="nav__dropdown-item" onClick={handleClick}>Tea Time</Link>
                                   </div>
                               </div>
                             </div>
@@ -77,16 +81,16 @@ export default function NavSidebar() {
 
                               <div className="nav__dropdown-collapse">
                                   <div className="nav__dropdown-content">
-                                      <Link to="/dish-type/biscuits" className="nav__dropdown-item">Biscuits</Link>
-                                      <Link to="/dish-type/bread" className="nav__dropdown-item">Breads</Link>
-                                      <Link to="/dish-type/cereals" className="nav__dropdown-item">Cereals</Link>
-                                      <Link to="/dish-type/desserts" className="nav__dropdown-item">Desserts</Link>
-                                      <Link to="/dish-type/drinks" className="nav__dropdown-item">Drinks</Link>
+                                      <Link to="/dish-type/biscuits" className="nav__dropdown-item" onClick={handleClick}>Biscuits</Link>
+                                      <Link to="/dish-type/bread" className="nav__dropdown-item" onClick={handleClick}>Breads</Link>
+                                      <Link to="/dish-type/cereals" className="nav__dropdown-item" onClick={handleClick}>Cereals</Link>
+                                      <Link to="/dish-type/desserts" className="nav__dropdown-item" onClick={handleClick}>Desserts</Link>
+                                      <Link to="/dish-type/drinks" className="nav__dropdown-item" onClick={handleClick}>Drinks</Link>
                                   </div>
                               </div>
                             </div>
 
-                            <Link to="/healthy-meals/food" className="nav__link">
+                            <Link to="/healthy-meals/food" className="nav__link" onClick={handleClick}>
                               <BiDumbbell className="nav__icon" />
                                 <span className="nav__name">Healthy Foods</span>
                             </Link>

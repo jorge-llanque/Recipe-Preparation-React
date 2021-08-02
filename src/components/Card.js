@@ -15,7 +15,7 @@ export default function Card(params) {
           <img loading="lazy" className="Card__Image" src={urlImage} alt="it-is-a-card" />
         </div>
         <div className="Info" >
-          <span className="Info__Kicker">{source}</span>
+          <span className="Info__Kicker">{source} Recommend</span>
           <Link to={`/recipe/${idRecipe}`}>
               <h1 className="Info__Title" >{decodeURI(title)}</h1>
           </Link>

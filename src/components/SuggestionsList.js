@@ -2,7 +2,7 @@ import React from 'react'
 import {useLocation} from 'wouter'
 import { v4 as uuidv4 } from 'uuid';
 import suggestionsList from '../utils/suggestionsList'
-
+import './styles/SuggestionsList.css'
 
 export default function SuggestionsList({category}) {
 const [path, pushLocation] = useLocation()
@@ -32,12 +32,13 @@ const [path, pushLocation] = useLocation()
         <ul>
         {
           element.titleList.map( item =>(
-            <input 
-              key={uuidv4()} 
-              type="button" 
-              onClick={handleOnClick} 
-              value={item.name} 
-            />
+            <li className="SuggestionList__Card" key={uuidv4()}>
+              <input 
+                type="button" 
+                onClick={handleOnClick} 
+                value={item.name} 
+              />
+            </li>
           ))
         }
        </ul>

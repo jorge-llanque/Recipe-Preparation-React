@@ -39,7 +39,8 @@
   padding-right: 10px;
   padding-left: 10px;
   height: auto;
-  max-height: 50px;
+  max-height: 55px;
+  overflow: hidden;
 }
 .Info__Relevant {
   font-size: 12px;

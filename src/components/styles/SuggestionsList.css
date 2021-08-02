@@ -1,0 +1,23 @@
+.SuggestionList ul {
+  margin-top: 100px;
+}
+
+.SuggestionList__Card {
+  list-style: none;
+  width: 190px;
+  height: 120px;
+  background-color: #fff;
+  margin: 50px 0;
+  border-radius: 5px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.SuggestionList__Card input {
+  position: relative;
+  top: -20px;
+  width: 150px;
+  height: 120px;
+  background-image:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUxf2DSyW9BojHxSI2FCjtDrVcqIDoF3FFqw&usqp=CAU");
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  border: none;
+  border-radius: 5px;
+}
