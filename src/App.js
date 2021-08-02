@@ -13,7 +13,7 @@ function App() {
   return (
     <div className="App">
       <RecipesContextProvider>
-        <Layout>
+        <Layout>  
           <Switch>
             <Route path="/" component={Home} />
             <Route path="/search/:keyword/:type?/:keywordType?" component={SearchResults} />

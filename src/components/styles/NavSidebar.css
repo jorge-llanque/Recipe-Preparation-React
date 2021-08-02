@@ -51,7 +51,6 @@
 }
 @media (min-width: 1024px) { 
   .Navigation--Wrapper {
-    --tw-translate-x: 0px;
     position: static;
     top: 0px;
     right: 0px;
@@ -117,9 +116,7 @@
   border-radius: 5px;
 }
 
-.nav__link:hover {
-  color: #d4aa20;
-}
+
 
 .nav__icon {
   font-size: 1.2rem;
