@@ -4,6 +4,7 @@ import {v4 as uuidv4} from 'uuid'
 
 export default function ListOfCards({recipes}) {
 
+  console.log(recipes)
   return (
   <div className="List__Cards" >
     {
@@ -15,6 +16,7 @@ export default function ListOfCards({recipes}) {
         uri={item.recipe.uri}
         source={item.recipe.source}
         calories={item.recipe.calories}
+        quantityIngredients={item.recipe.ingredientLines}
       />
       )
     }

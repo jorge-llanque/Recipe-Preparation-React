@@ -5,6 +5,7 @@ import ListOfCards from '../components/ListOfCards'
 import useResults from '../hooks/useResults'
 
 
+
 export default function SearchResults({params}) {
   const {keyword, type, keywordType} = params
   const {loading, recipes, setDietParam} = useResults({keyword, type, keywordType})
@@ -28,16 +29,16 @@ export default function SearchResults({params}) {
     {
     loading 
     ? <i>Cargando...</i> 
-    : <div>
-      <h1>{decodeURI(keyword)}</h1>
-      <ul className="Diet--Options" >
-        {
-          dietLabels.map((label) => (
-            <input key={uuidv4()} onClick={handleClick} type="button" value={label.name} />    
-          ))
-        }
-      </ul>
-      <ListOfCards recipes={recipes} />
+    : <div className="SearchResults__Container" >
+        <h1>{decodeURI(keyword)}</h1>
+        <ul className="Diet__Options" >
+          {
+            dietLabels.map((label) => (
+              <input key={uuidv4()} onClick={handleClick} type="button" value={label.name} className="Diet__Options-Item" />
+            ))
+          }
+        </ul>
+        <ListOfCards recipes={recipes} />
       </div>
     }    
     </>

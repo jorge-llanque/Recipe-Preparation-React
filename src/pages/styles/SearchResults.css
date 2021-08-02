@@ -1,11 +1,21 @@
-.Diet--Options{
-  display: flex;
+.SearchResults__Container {
+  overflow: hidden;  
 }
-.Diet--Options li {
+.Diet__Options{
+  display: flex;
+  height: 40px;
+  overflow: scroll;
+  transition-duration: 2s;
+  transition-property: overflow;
+}
+.Diet__Options::-webkit-scrollbar {display: none;}
+.Diet__Options-Item {
   margin: 2px;
-  padding: 5px;
-  border-radius: 15px;
-  background-color: khaki;
-  list-style: none;
-  cursor: pointer;
+  border-radius: 5px;
+  border: none;
+  color: var(--color-green-dark);
+  background-color: #F0F5F5;
+  font-weight: 700;
+  text-transform: capitalize;
+  
 }
