@@ -39,26 +39,22 @@ export default function NavSidebar() {
         className={`Navigation--Wrapper ${isSidebarOpen ? "Navigation--isSidebarOpen" : "Navigation--isNotSidebarOpen" } `}
       >
             <nav className="nav__container">
-                <div>
-                    <Link to="/" className="nav__link nav__logo">
-                        <i className='bx bxs-disc nav__icon' ></i>
+                    <div className="nav__logo">
                         <span className="nav__logo-name">RECIPE NUTRITION</span>
-                    </Link>
+                    </div>
     
                     <div className="nav__list">
                         <div className="nav__items">
-                            <h3 className="nav__subtitle">Profile</h3>
-    
                             <Link to="/" className="nav__link active">
-                              <BiHomeAlt className="Icon__Navbar-Item" />
+                              <BiHomeAlt className="nav__icon" />
                                 <span className="nav__name">Home</span>
                             </Link>
                             
                             <div className="nav__dropdown">
                               <Link to="/" className="nav__link">
-                                  <BiFoodMenu className="Icon__Navbar-Item" />
+                                  <BiFoodMenu className="nav__icon" />
                                   <span className="nav__name">Meal Type</span>
-                                  <i className='bx bx-chevron-down nav__icon nav__dropdown-icon'><BiChevronDown /></i>
+                                  <BiChevronDown className='nav__icon nav__dropdown-icon'/>
                               </Link>
 
                               <div className="nav__dropdown-collapse">
@@ -74,7 +70,7 @@ export default function NavSidebar() {
 
                             <div className="nav__dropdown">
                               <Link to="/" className="nav__link">
-                                  <BiDish className="Icon__Navbar-Item" />
+                                  <BiDish className="nav__icon" />
                                   <span className="nav__name">Dish Type</span>
                                   <i className='bx bx-chevron-down nav__icon nav__dropdown-icon'><BiChevronDown /></i>
                               </Link>
@@ -90,14 +86,13 @@ export default function NavSidebar() {
                               </div>
                             </div>
 
-                            <Link to="/healthy-meals/food" className="nav__link active">
-                              <BiDumbbell className="Icon__Navbar-Item" />
+                            <Link to="/healthy-meals/food" className="nav__link">
+                              <BiDumbbell className="nav__icon" />
                                 <span className="nav__name">Healthy Foods</span>
                             </Link>
                             
                          </div>
                     </div>
-                </div>
             </nav>
           
       </div>
