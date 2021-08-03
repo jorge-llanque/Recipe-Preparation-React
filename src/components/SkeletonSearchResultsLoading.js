@@ -6,7 +6,7 @@ export default function SkeletonSearchResultsLoading() {
 
 
   return (
-    <div className="SearchResults__Container" >
+    <div className="SearchResults__Container" data-testid="skeleton-container" >
       <h1><Skeleton width={150} /></h1>
       <ul className="Diet__Options" >
           {

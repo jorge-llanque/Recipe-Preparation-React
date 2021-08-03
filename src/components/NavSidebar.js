@@ -56,7 +56,7 @@ export default function NavSidebar() {
     
                     <div className="Nav__List">
                         <div className="Nav__Items">
-                            <ActiveLink href="/" className="Nav__Link" onClick={handleClick} >
+                            <ActiveLink href="/" data-testid="Nav__Link" className="Nav__Link" onClick={handleClick} >
                               <BiHomeAlt className="Nav__Icon" />
                                 <span className="Nav__Name">Home</span>
                             </ActiveLink>

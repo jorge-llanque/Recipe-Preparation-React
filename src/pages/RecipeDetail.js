@@ -8,7 +8,9 @@ import useResults from "../hooks/useResults";
 export default function RecipeDetail({params}) {
 
   const recipes = useGlobalRecipes()
-  
+    
+    if(recipes !== true) return (<h1>There is not that Information</h1>)
+
     const {recipe} = recipes.find( singleRecipe => {
       let idSingleRecipe = getIdRecipeFromUri(singleRecipe.recipe.uri)
       if(idSingleRecipe === params.id) return singleRecipe

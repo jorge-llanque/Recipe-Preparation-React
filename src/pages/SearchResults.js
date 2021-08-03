@@ -29,8 +29,8 @@ export default function SearchResults({params}) {
     <>
     {
     loading 
-    ? <SkeletonSearchResultsLoading/>
-    : recipes.length ? <div className="SearchResults__Container" >
+    ? <SkeletonSearchResultsLoading />
+    : (recipes == true) ? <div className="SearchResults__Container" >
         <h1>{decodeURI(keyword)}</h1>
         <ul className="Diet__Options" >
           {
