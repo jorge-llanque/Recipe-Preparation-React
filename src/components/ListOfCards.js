@@ -6,6 +6,7 @@ import './styles/ListOfCards.css'
 export default function ListOfCards({recipes}) {
 
   console.log(recipes)
+
   return (
   <div className="List__Cards" >
     {

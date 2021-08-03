@@ -1,0 +1,38 @@
+.NotFound__Container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.NotFound__Container span:nth-child(1){
+  font-size: 90px; 
+  font-family: var(--title-font);
+  color: #025216;
+}
+.NotFound__Container span:nth-child(2){
+  font-size: 30px;
+  font-weight: 400;
+}
+.NotFound__Container span:nth-child(3){
+  font-weight: 400;
+  font-size: 16px;
+  color: #0d6b25;
+}
+.NotFound__Button {
+  background-color: rgb(252, 183, 35);
+  color: #FFF;
+  font-weight: 500;
+  width: 150px;
+  height: 40px;
+  border-radius: 5px;
+  border: none;
+  text-decoration: none;
+  text-align: center;
+  margin: 30px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}

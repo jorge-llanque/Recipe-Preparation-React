@@ -88,11 +88,11 @@ export default function NavSidebar() {
 
                               <div className="Nav__Dropdown-Collapse">
                                   <div className="Nav__Dropdown-Content">
-                                      <ActiveLink href="/dish-type/biscuits" className="Nav__Dropdown-Item" onClick={handleClick}>Biscuits</ActiveLink>
-                                      <ActiveLink href="/dish-type/bread" className="Nav__Dropdown-Item" onClick={handleClick}>Breads</ActiveLink>
-                                      <ActiveLink href="/dish-type/cereals" className="Nav__Dropdown-Item" onClick={handleClick}>Cereals</ActiveLink>
-                                      <ActiveLink href="/dish-type/desserts" className="Nav__Dropdown-Item" onClick={handleClick}>Desserts</ActiveLink>
-                                      <ActiveLink href="/dish-type/drinks" className="Nav__Dropdown-Item" onClick={handleClick}>Drinks</ActiveLink>
+                                      <ActiveLink href="/dish-type/Pancake" className="Nav__Dropdown-Item" onClick={handleClick}>Pancake</ActiveLink>
+                                      <ActiveLink href="/dish-type/Bread" className="Nav__Dropdown-Item" onClick={handleClick}>Breads</ActiveLink>
+                                      <ActiveLink href="/dish-type/Cereals" className="Nav__Dropdown-Item" onClick={handleClick}>Cereals</ActiveLink>
+                                      <ActiveLink href="/dish-type/Desserts" className="Nav__Dropdown-Item" onClick={handleClick}>Desserts</ActiveLink>
+                                      <ActiveLink href="/dish-type/Drinks" className="Nav__Dropdown-Item" onClick={handleClick}>Drinks</ActiveLink>
                                   </div>
                               </div>
                             </div>

@@ -3,14 +3,18 @@ import {v4 as uuidv4} from 'uuid'
 import useGlobalRecipes from '../hooks/useGlobalRecipes'
 import getIdRecipeFromUri from '../utils/getIdRecipeFromUri'
 import './styles/RecipeDetail.css'
+import useResults from "../hooks/useResults";
 
 export default function RecipeDetail({params}) {
-  const recipes = useGlobalRecipes()
 
-  const {recipe} = recipes.find( singleRecipe => {
-    let idSingleRecipe = getIdRecipeFromUri(singleRecipe.recipe.uri)
-    if(idSingleRecipe === params.id) return singleRecipe
-  })
+  const recipes = useGlobalRecipes()
+  
+    const {recipe} = recipes.find( singleRecipe => {
+      let idSingleRecipe = getIdRecipeFromUri(singleRecipe.recipe.uri)
+      if(idSingleRecipe === params.id) return singleRecipe
+    })
+  
+
 
   return (
     <>

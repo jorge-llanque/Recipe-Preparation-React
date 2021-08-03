@@ -22,17 +22,21 @@ export default function useResults({keyword, type, keywordType} = {keyword: null
 
   useEffect(() => {
     if(dietParam == null) return
+    setLoading(true)
     getResults({keyword: keywordToUse, dietParam})
       .then( filteredByDiet => {
         setRecipes(filteredByDiet)
+        setLoading(false)
       })
   }, [keywordToUse, dietParam, setRecipes])
 
     useEffect(() => {
       if(type == null) return
+      setLoading(true)
       getResults({keyword: keywordToUse, type, keywordType})
         .then( filteredByMealType => {
           setRecipes(filteredByMealType)
+          setLoading(false)
         })
     }, [keywordToUse, type,setRecipes, keywordType])
 

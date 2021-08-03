@@ -20,8 +20,9 @@ const [path, pushLocation] = useLocation()
      }
     })
 
-  const handleOnClick = (e) => {
-    const keyword = e.target.value
+    const handleOnClick = (e) => {
+      const keyword = e.target.value
+      console.log(keyword, type, keywordType)
     pushLocation(`/search/${keyword}/${type}/${keywordType}`)
   }
 

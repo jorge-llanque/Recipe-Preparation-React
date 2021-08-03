@@ -7,6 +7,7 @@ import OptionsAndCategories from './pages/OptionsAndCategories'
 import './App.css'
 import {RecipesContextProvider} from './context/RecipesContext'
 import Layout from './components/Layout'
+import NotFound from './pages/NotFound'
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
             <Route path="/meal-type/:mealType" component={OptionsAndCategories}/>
             <Route path="/dish-type/:dishType" component={OptionsAndCategories}/>
             <Route path="/healthy-meals/:healthyType" component={OptionsAndCategories}/>
+            <Route path="/:rest*" component={NotFound}/>
           </Switch>
         </Layout>
       </RecipesContextProvider>

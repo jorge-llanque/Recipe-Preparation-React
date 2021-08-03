@@ -5,7 +5,7 @@ export default [
       { keyword: "breakfast",
         titleList: [
         { name:"bacon"},
-        { name:"pancackes"},
+        { name:"Pudding"},
         { name:"chicken and waffles"},
         { name:"avocado toast"},
         { name:"home fries"},
@@ -66,7 +66,7 @@ export default [
         { name:"Lemon drizzle cake"},
         { name:"Fruit scones"},
         { name:"Florentines"},
-        { name:"Sausage rolls"},
+        { name:"Chai Tea Latte"},
         { name:"Cupcakes"},
         { name:"Biscotti"},
         { name:"Banana bread"}
@@ -76,21 +76,21 @@ export default [
   },{
     type: "dishType",
     content: [
-      { keyword: "biscuits",
+      { keyword: "Pancake",
         titleList: [
-        { name:"Rolled Biscuits"},
-        { name:"Drop Biscuits"},
-        { name:"Scones"},
-        { name:"Shortcakes"},
-        { name:"Southern Buttermilk Biscuits"},
-        { name:"Angel Biscuits"},
-        { name:"Dumplings"},
-        { name:"Crostoli"},
-        { name:"Biscotti"},
-        { name:"Cookies"}
+        { name:"Irish Boxty"},
+        { name:"American-Style"},
+        { name:"Scotch Pancakes"},
+        { name:"Blueberry pancakes"},
+        { name:"Russian Blinis"},
+        { name:"Japanese cabbage"},
+        { name:"Danish Aebleskiver"},
+        { name:"Coconut crepes"},
+        { name:"Korean Jeon"},
+        { name:"Dutch Poffertjes"}
       ]
       },
-      { keyword: "bread",
+      { keyword: "Bread",
         titleList: [
         { name:"Banana Bread"},
         { name:"Baguette"},
@@ -104,21 +104,21 @@ export default [
         { name:"Pita Bread"}
       ]
     },
-    { keyword: "cereals",
+    { keyword: "Cereals",
         titleList: [
         { name:"Peanut Butter"},
-        { name:"Tropical Breakfast Parfait"},
-        { name:"Strawberry-Banana Cereal Treats"},
-        { name:"Cornflake Cookies"},
-        { name:"Puffed Rice Snowballs"},
-        { name:"Brown Butter Crispy Treats"},
-        { name:"Puffed Cereal Treat Donuts"},
-        { name:"Cinnamon-Raisin Cereal Treats"},
+        { name:"Fruit Granola"},
+        { name:"Strawberry Cereal"},
+        { name:"Cookies"},
+        { name:"Cheese Crispies"},
+        { name:"Yoghurt Bars"},
+        { name:"Apricot Granola"},
+        { name:"Cinnamon-Raisin"},
         { name:"S'more Bites"},
         { name:"Marshmallow Crispie Bars"}
       ]
     },
-        { keyword: "desserts",
+        { keyword: "Desserts",
         titleList: [
         { name:"Custards and Puddings"},
         { name:"Frozen Desserts"},
@@ -132,7 +132,7 @@ export default [
         { name:"Cookie Dough Buckeyes"}
       ]
     },
-        { keyword: "drinks",
+        { keyword: "Drinks",
         titleList: [
         { name:"Old Fashioned"},
         { name:"Margarita"},
