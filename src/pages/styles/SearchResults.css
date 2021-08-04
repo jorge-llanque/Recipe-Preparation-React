@@ -5,21 +5,35 @@
 }
 .Diet__Options{
   display: flex;
-  height: 40px;
+  height: 4rem;
   overflow: scroll;
   transition-duration: 2s;
   transition-property: overflow;
-  margin: 15px 0;
+  margin: 1.5rem 0;
+  scrollbar-width: none;
 }
 .Diet__Options::-webkit-scrollbar {
   display: none;
 }
 .Diet__Options-Item {
-  margin: 2px;
+  margin: .2rem;
   border: none;
+  font-size: 1.2rem;
   color: var(--color-green-dark);
   background-color: #ecf0f0;
   font-weight: 700;
   text-transform: capitalize;
   padding: 0 10px;
+}
+@media screen and (min-width: 768px) {
+  .SearchResults__Container {
+    padding: 25px;
+    margin-top: 60px;
+  }
+  .SearchResults__Container > h1 {
+    font-size: 3rem;
+  }
+  .Diet__Options{
+    justify-content: center;
+  }
 }

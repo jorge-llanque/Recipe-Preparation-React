@@ -30,7 +30,7 @@ const [path, pushLocation] = useLocation()
     <>
      <section className="SuggestionList" >
        <h2>Suggestions</h2>
-        <ul>
+        <ul className="SuggestionList__List" >
         {
           element.titleList.map( item =>(
             <li className="SuggestionList__Card" key={uuidv4()}>

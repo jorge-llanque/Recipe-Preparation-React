@@ -26,13 +26,13 @@ export default function NavSidebar() {
     const [isActive] = useRoute(props.href)
     return (
       <Link {...props} >
-         <a className={isActive ? "active Nav__Link Nav__Dropdown-Item" : "Nav__Link Nav__Dropdown-Item" }>{props.children}</a>
+         <a className={isActive ? "active Nav__Link" : "Nav__Link " }>{props.children}</a>
       </Link>
     )
   }
 
   return (
-    <>
+    <div className="Navbar__Container-1024">
       <div
         onClick={handleSetOpenNavbar}
         className={`Back-Wrapper ${
@@ -107,6 +107,6 @@ export default function NavSidebar() {
             </nav>
           
       </div>
-    </>
+    </div>
   )
 }

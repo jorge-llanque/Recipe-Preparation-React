@@ -19,22 +19,21 @@
 }
 .Info__Kicker-Detail {
   background-color: #E9FAB0;
-  height: 25px;
+  height: 3rem;
   color: var(--color-gray-light);
-  font-size: 14px;
+  font-size: 1.4rem;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .Info-Description {
-  padding-left: 10px;
+  padding: 0 2rem;
 }
 .Info__Title-Detail {
   color: var(--color-green-dark);
-  font-size: 25px;
+  font-size: 2.5rem;
   text-align: left;
   height: auto;
-  max-height: 50px;
   margin: 25px 0;
 }
 .Info__Relevant-Detail {
@@ -48,17 +47,18 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 5px 0;
+  margin: .5rem 0;
 }
 .Info__Relevant-Box span {
   color: var(--color-gray-light);
   margin-right: 15px;
 }
 .Info__Relevant-Box span:nth-child(1){
+  font-size: 1.2rem;
   color: rgb(235, 179, 115);
 }
 .Info__Relevant-Box strong {
-  font-size: 18px;
+  font-size: 1.8rem;
 }
 .Info__IngredientsList {
   margin-top: 50px;
@@ -67,8 +67,32 @@
   margin: 10px 0;
   text-align: left;
   color: var(--color-green-dark);
+  font-size: 1.6rem;
 }
 .Info__IngredientsList ul li {
   text-align: left;
   padding-left: 10px;
+  list-style: none;
+  font-size: 1.4rem;
+  line-height: 20px;
 }
+@media screen and (min-width: 768px) {
+  .Detail__Image-Polaroid {
+    height: 35rem;
+  }
+  .Info__IngredientsList ul li {
+    line-height: 25px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+

@@ -19,7 +19,7 @@
 .Header__Title {
   margin-top: 100px;
   font-family: var(--title-font);
-  font-size: 60px;
+  font-size: 6rem;
   letter-spacing: 0.2px;
   color: var(--color-green-dark);
   text-align: left;
@@ -27,7 +27,7 @@
 }
 .Header__Subtitle {
   color: var(--color-gray-light);
-  font-size: 16px;
+  font-size: 1.6rem;
 }
 .Form--Search {
   margin-top: 80px;
@@ -39,9 +39,49 @@
   border-radius: 10px;
   outline: none;
   padding: 0 10px;
-  font-size: 14px;
+  font-size: 1.4rem;
   letter-spacing: 1.8px;
   cursor: pointer;
   color: var(--color-green-dark);
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+@media screen and (min-width: 768px) {
+  .Home {
+    padding: 25px;
+  }
+  .Background-Square {
+    top: 200px;
+    left: 230px;
+    width: 550px;
+    height: 550px;
+    border-radius: 20px;
+  }
+  .Header__Subtitle {
+    margin: 25px 0;
+  }
+  .Form--Search input {
+  width: 380px;
+  height: 70px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .Home {
+    width: 100px;
+    height: 100px;
+    padding: 15px;
+  }
+  .Header__Title {
+    margin-top: 50px;
+    font-size: 6rem;
+    letter-spacing: 0.2px;
+    text-align: center;
+  }
+  .Background-Square {
+    top: 200px;
+    left: 230px;
+    width: 300px;
+    height: 300px;
+    border-radius: 20px;
+  }
 }

@@ -1,6 +1,6 @@
 .Card__Container {
   width: 80%;
-  max-width: 400px;
+  max-width: 250px;
   height: auto;
   border-radius: 15px;
   display: flex;
@@ -8,7 +8,7 @@
   overflow: hidden;
   background-color: #fff;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-  margin-bottom: 30px;
+  margin: 15px 10px;
 }
 .Card__Image-Polaroid {
   width: 100%;
@@ -19,33 +19,36 @@
   overflow: hidden;
 }
 .Card__Image {
-  width: 100%;
+  width: 115%;
 }
 .Info {
   display: flex;
   flex-direction: column;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 .Info__Kicker {
   background-color: #E9FAB0;
-  height: 20px;
+  height: 2.2rem;
   color: var(--color-gray-light);
-  font-size: 14px;
+  font-size: 1.4rem;
+  width: 100%;
+  padding: 0 10px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .Info__Title {
   color: var(--color-green-dark);
-  font-size: 20px;
+  font-size: 2rem;
   text-align: left;
-  padding-right: 10px;
-  padding-left: 10px;
-  height: auto;
-  max-height: 55px;
+  height: 86px;
+  padding: 10px;
   overflow: hidden;
 }
 .Info__Relevant {
-  font-size: 12px;
+  font-size: 1.2rem;
   text-align: left;
-  padding-left: 10px;
+  padding: 0 10px ;
 }
 .Info__Relevant span {
   color: var(--color-gray-light);

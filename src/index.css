@@ -20,23 +20,20 @@
   --primary-color-white: #f7f7f7;
   --body-font: 'Poppins', sans-serif;
   --normal-font-size: .938rem;
-  --small-font-size: .75rem;
+  --small-font-size: 1.2rem;
   --smaller-font-size: .75rem;
   --font-medium: 500;
   --font-semi-bold: 600;
   --z-fixed: 100;
 }
-@media screen and (min-width: 1024px) {
-  :root {
-    --normal-font-size: 1rem;
-    --small-font-size: .875rem;
-    --smaller-font-size: .813rem;
-  }
-}
+
 *, ::before, ::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+html {
+  font-size: 62.5%;
 }
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -45,9 +42,16 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--primary-color-white);
-
 }
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+@media screen and (min-width: 768px){
+  html {
+    font-size: 78%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  
 }
