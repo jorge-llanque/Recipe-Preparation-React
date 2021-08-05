@@ -26,10 +26,11 @@ export default function Home() {
       <form onSubmit={handleSubmit} className="Form--Search" >
         <input 
           onChange={handleChange} 
-          type="text" 
+          type="text"
           placeholder="Search a recipe, an ingredient ..." 
           value={keyword} 
           ref={searchInput}/>
+          <button>Buscar</button>
       </form>
     </div>
   )

@@ -1,4 +1,4 @@
-import { fireEvent, render, screen, waitFor } from '@testing-library/react';
+import { fireEvent, getByTestId, render, screen, findByTestId, waitForElementToBeRemoved, queryByText, waitFor } from '@testing-library/react';
 import Home from '../../pages/Home'
 
 describe('<Home />', () => {
@@ -9,6 +9,26 @@ describe('<Home />', () => {
     screen.getByText(/Healthy habits for a better life/i)
     screen.getByText(/The pocket nutritionist app that will help you reach your health and weight goals/i)
     screen.getByPlaceholderText("Search a recipe, an ingredient ...")
+  })
+
+  test('Should find a keyword', async () => {
+    jest.setTimeout(10000)
+    render(<Home />)
+    const keywordValue = "beans"
+    const input = screen.getByPlaceholderText("Search a recipe, an ingredient ...")
+    const buttonSearch = screen.getByRole("button",{name:"Buscar"})
+    
+    fireEvent.change(input, {target: {value: keywordValue}})
+    fireEvent.click(buttonSearch)
+    
+    expect(screen.queryByRole('alert')).not.toBeInTheDocument()
+    expect(screen.getByRole("heading")).toBeInTheDocument()
+
+    await waitFor(() => {
+      // const title = screen.findByRole("button", {name: "balanced"})
+      // expect(title).toBeVisible()
+    })
+    
   })
 
   // test('Search Form could be used', async() => {

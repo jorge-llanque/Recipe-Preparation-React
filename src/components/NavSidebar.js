@@ -60,8 +60,13 @@ export default function NavSidebar() {
                               <BiHomeAlt className="Nav__Icon" />
                                 <span className="Nav__Name">Home</span>
                             </ActiveLink>
+
+                            <ActiveLink href="/healthy-meals/food" className="Nav__Link" onClick={handleClick}>
+                              <BiDumbbell className="Nav__Icon" />
+                                <span className="Nav__Name">Healthy Foods</span>
+                            </ActiveLink>
                             
-                            <div className="Nav__Dropdown">
+                            <div className="Nav__Dropdown Help1">
                               <div className="Nav__Link">
                                   <BiFoodMenu className="Nav__Icon" />
                                   <span className="Nav__Name">Meal Type</span>
@@ -79,7 +84,7 @@ export default function NavSidebar() {
                               </div>
                             </div>
 
-                            <div className="Nav__Dropdown">
+                            <div className="Nav__Dropdown Help2">
                               <div to="/" className="Nav__Link">
                                   <BiDish className="Nav__Icon" />
                                   <span className="Nav__Name">Dish Type</span>
@@ -97,10 +102,7 @@ export default function NavSidebar() {
                               </div>
                             </div>
 
-                            <ActiveLink href="/healthy-meals/food" className="Nav__Link" onClick={handleClick}>
-                              <BiDumbbell className="Nav__Icon" />
-                                <span className="Nav__Name">Healthy Foods</span>
-                            </ActiveLink>
+
                             
                          </div>
                     </div>
