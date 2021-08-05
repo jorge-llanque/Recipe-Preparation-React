@@ -22,6 +22,7 @@ export default function Home() {
       <div className="Background-Square"></div>
       <div className="Background-Triangle"></div>
       <div className="Background-Circle" ></div>
+      <div className="Background-Cube"></div>
       <header className="Header" >
         <h1 className="Header__Title" >Healthy habits for a <b>better life</b></h1>
         <p className="Header__Subtitle" >The pocket nutritionist app that will help you reach your health and weight goals</p>

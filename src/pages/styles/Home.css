@@ -130,4 +130,15 @@
     z-index: -1;
     transform: rotate(55deg);
   }
+  .Background-Cube {
+    position: absolute;
+    top:  700px;
+    right: 40px;
+    width: 800px;
+    height: 800px;
+    border-radius: 20px;
+    background-color:#123f58eb;
+    z-index: -1;
+    transform: rotate(60deg);
+  }
 }
