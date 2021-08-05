@@ -94,7 +94,31 @@
     line-height: 25px;
   }
 }
-
+@media screen and (min-width: 1024px) {
+  .Detail__Container {
+    height: auto;
+    display: flex;
+    flex-direction: row-reverse;
+    width: 50%;
+    min-width: 800px;
+    margin: 50px auto;
+  }
+  .Detail__Image-Polaroid {
+    width: auto;
+    height: auto;
+    padding: 10px;
+    
+  }
+  .Detail__Image-Polaroid img {
+    width: 100%;
+    height: auto;
+  }
+  .Info-Detail {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+  }
+}
 
 
 
