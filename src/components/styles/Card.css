@@ -59,3 +59,9 @@
   color: var(--secundary-color-dark-strong);
   margin-right: 15px;
 }
+
+@media screen and (min-width: 1024px) {
+  .Card__Container {
+    margin: 20px 30px;
+  }
+}

@@ -3,3 +3,10 @@
   justify-content: center;
   flex-wrap: wrap;
 }
+
+@media screen and (min-width: 1024px) {
+  .List__Cards {
+    flex-wrap: wrap;
+  }
+
+}
