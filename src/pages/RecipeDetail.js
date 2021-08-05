@@ -4,6 +4,8 @@ import useGlobalRecipes from '../hooks/useGlobalRecipes'
 import getIdRecipeFromUri from '../utils/getIdRecipeFromUri'
 import './styles/RecipeDetail.css'
 import useResults from "../hooks/useResults";
+import { BiCheck } from 'react-icons/bi';
+
 
 export default function RecipeDetail({params}) {
 
@@ -59,11 +61,14 @@ export default function RecipeDetail({params}) {
                 </div>
               </div>
               <div className="Info__IngredientsList">
-                <h3>Ingredients</h3>
+                <h3>Ingredients :</h3>
                 <ul>
                   {
                   recipe.ingredientLines.map( ingredient => 
-                  <li key={uuidv4()} >{ingredient}</li>
+                    <div className="Ingredient__Item" >
+                      <BiCheck className="Ingredient__Item-Icon"/>
+                      <li key={uuidv4()} >{ingredient}</li>
+                    </div>
                   )
                   }
                 </ul>

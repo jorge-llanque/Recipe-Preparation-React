@@ -41,7 +41,7 @@
   white-space: normal;
   text-transform: capitalize;
   letter-spacing: 1px;
-  color: rgb(167, 167, 167);
+  color: var(--primary-color-light-strong);
   font-size: 2rem;
   cursor: pointer;
 }

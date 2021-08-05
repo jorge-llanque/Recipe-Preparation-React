@@ -16,7 +16,7 @@ export default function SkeletonSearchResultsLoading() {
           }
       </ul>
       <div className="List__Cards" >
-            {[1,2,3].map(()=>(
+            {[1,2,3,4,5,6].map(()=>(
               <figure key={uuidv4()} className="Card__Container" >
                 <div className="Card__Image-Polaroid" >
                   <Skeleton width={400} height={300} className="Card__Image"/>

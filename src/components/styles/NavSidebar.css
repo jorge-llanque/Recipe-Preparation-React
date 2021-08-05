@@ -32,7 +32,7 @@
 .Icon-Menu {
   width: 5.5rem;
   height: 4.5rem;
-  color: var(--color-gray-light);
+  color: var(--secundary-color-dark-strong);
 }
 .Navigation-Wrapper {
   position: fixed;
@@ -97,7 +97,7 @@
   height: 35px;
   display: flex;
   align-items: center;
-  color: var(--text-color);
+  color: var(--primary-color-light);
   text-decoration: none;
   padding-left: 5px;
 }
@@ -111,7 +111,7 @@
   font-size: var(--small-font-size);
   font-weight: var(--font-medium);
   white-space: nowrap;
-  color: #5d7467;
+  color: var(--primary-color-light);
 }
 
 /* Dropdown */
@@ -164,8 +164,8 @@
 
 /*===== Active link =====*/
 .active {
-  color: #d4aa20;
-  background-color: rgb(231, 230, 230);
+  color: var(--primary-color-dark);
+  background-color: var(--secundary-color-light);
   border-radius: 5px;
   font-weight: 700;
 }
