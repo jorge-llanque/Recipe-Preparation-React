@@ -15,7 +15,6 @@ export default function OptionsAndCategories({params}) {
   
   return (
     <div>
-      {category.type}
       <SuggestionsList category={category} />
     </div>
   )

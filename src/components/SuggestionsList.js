@@ -29,7 +29,9 @@ const [path, pushLocation] = useLocation()
   return (
     <>
      <section className="SuggestionList" >
-       <h2>Suggestions</h2>
+       <div className="SuggestionList__Header">
+         <h2>Suggestions</h2>
+       </div>
         <ul className="SuggestionList__List" >
         {
           element.titleList.map( item =>(

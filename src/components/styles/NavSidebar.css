@@ -18,16 +18,19 @@
 .Back--isNotSidebarOpen {
   display: none;
 }
-.Menu__Button {
-  position: absolute;
-  border: none;
+.Menu__Button-Origin{
+  position: fixed;
   top: 10px;
   left: 10px;
-  background-color: transparent;
-  z-index: 1;
+  z-index: 30;
+  width: 70px;
+}
+.Menu__Button {
+  border: none;
+  background: transparent;
 }
 .Icon-Menu {
-  width: 4.5rem;
+  width: 5.5rem;
   height: 4.5rem;
   color: var(--color-gray-light);
 }
@@ -213,20 +216,30 @@
   .Nav__List,
   .Nav__Items {
     display: grid;
-    grid-template-columns: 120px 120px 120px 120px;
+    grid-template-columns: 130px 130px 130px 130px;
     grid-template-rows: 50px;
-    grid-auto-flow: row;
+  }
+  .Nav__Link {
+    justify-content: center;
+    margin: 5px;
+  }
+  .Nav__Link:hover {
+    background-color: rgb(231, 230, 230);
+    border-radius: 5px;
+  }
+  .Nav__Icon, .Nav__Name {
+    margin: 0 3px;
   }
   .Nav__Items{
     position: absolute;
   }
-
   .Nav__Dropdown {
     z-index: 160;
     left: 250px;
     position: absolute;
-    height: 200px;
+    height: auto;
     overflow: hidden;
+    width: 130px;
   }
   /* Rotate icon arrow */
   .Nav__Dropdown:hover .Nav__Dropdown-Icon {
@@ -235,11 +248,23 @@
   .Nav__Dropdown:hover{
     max-height: 60rem;
   }
+  .Help1 {
+    left: 267px;
+  }
   .Help2 {
     left: 400px;
   }
   .Nav__Dropdown-Item {
     text-align: center;
+  }
+  .Nav__Dropdown-Collapse {
+    background-color: #f0f0f0;
+    border-radius: 5px;
+  }
+  .Nav__Dropdown-Content {
+    display: grid;
+    row-gap: .5rem;
+    padding: 0;
   }
 }
 

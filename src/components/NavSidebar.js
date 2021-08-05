@@ -40,7 +40,7 @@ export default function NavSidebar() {
         }`}
       />
 
-      <div>
+      <div className="Menu__Button-Origin">
         <button className="Menu__Button" onClick={handleSetOpenNavbar} type="button" >
           <BiMenuAltLeft className="Icon-Menu" />
         </button>

@@ -3,6 +3,11 @@
   padding: 15px;
   margin-top: 30px;
 }
+.SearchResults__Header{
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
 .Diet__Options{
   display: flex;
   height: 4rem;

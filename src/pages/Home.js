@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react'
 import {useLocation} from 'wouter'
+import { BiSearchAlt2 } from 'react-icons/bi';
 import './styles/Home.css'
 
 export default function Home() {
@@ -30,7 +31,7 @@ export default function Home() {
           placeholder="Search a recipe, an ingredient ..." 
           value={keyword} 
           ref={searchInput}/>
-          <button>Buscar</button>
+          <button>Search</button>
       </form>
     </div>
   )

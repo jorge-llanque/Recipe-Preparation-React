@@ -31,6 +31,10 @@
 }
 .Form--Search {
   margin-top: 80px;
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+  gap: 20px;
 }
 .Form--Search input {
   width: 250px;
@@ -44,6 +48,18 @@
   cursor: pointer;
   color: var(--color-green-dark);
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.Form--Search button {
+  height: 40px;
+  width: 100px;
+  border: none;
+  font-weight: 700;
+  color: rgb(138, 138, 138);
+  font-size: 1.6rem;
+  background: rgb(235, 187, 83);
+  border-radius: 10px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  cursor: pointer;
 }
 
 @media screen and (min-width: 768px) {

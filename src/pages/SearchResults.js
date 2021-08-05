@@ -30,17 +30,21 @@ export default function SearchResults({params}) {
     {
     loading 
     ? <SkeletonSearchResultsLoading />
-    : (recipes.length) ? <div className="SearchResults__Container" >
-        <h1>{decodeURI(keyword)}</h1>
-        <ul className="Diet__Options" >
-          {
-            dietLabels.map((label) => (
-              <input key={uuidv4()} onClick={handleClick} type="button" value={label.name} className="Diet__Options-Item" />
-            ))
-          }
-        </ul>
+    : (recipes.length) 
+    ? <div className="SearchResults__Container" >
+       <div className="SearchResults__Header" >
+          <h1>{decodeURI(keyword)}</h1>
+          <ul className="Diet__Options" >
+            {
+              dietLabels.map((label) => (
+                <input key={uuidv4()} onClick={handleClick} type="button" value={label.name} className="Diet__Options-Item" />
+              ))
+            }
+          </ul>
+       </div>
         <ListOfCards recipes={recipes} />
-      </div> : <h1 className="SearchResults__Container">There is not recipes</h1>
+      </div> 
+    : <h1 className="SearchResults__Container">There is not recipes</h1>
     }
     </>
   )
