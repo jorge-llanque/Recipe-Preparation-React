@@ -99,6 +99,7 @@
   align-items: center;
   color: var(--text-color);
   text-decoration: none;
+  padding-left: 5px;
 }
 .Nav__Icon {
   font-size: 1.2rem;
@@ -216,19 +217,24 @@
   .Nav__List,
   .Nav__Items {
     display: grid;
-    grid-template-columns: 130px 130px 130px 130px;
+    grid-template-columns: 135px 135px 135px 135px;
     grid-template-rows: 50px;
   }
   .Nav__Link {
     justify-content: center;
-    margin: 5px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5px;
+    margin: 7px 7px 0 7px;
+    justify-content: center;
+    align-content: center;
   }
   .Nav__Link:hover {
     background-color: rgb(231, 230, 230);
     border-radius: 5px;
   }
   .Nav__Icon, .Nav__Name {
-    margin: 0 3px;
+    margin: 0;
   }
   .Nav__Items{
     position: absolute;
@@ -265,6 +271,9 @@
     display: grid;
     row-gap: .5rem;
     padding: 0;
+  }
+  .Icon-Home {
+    justify-self: end;
   }
 }
 

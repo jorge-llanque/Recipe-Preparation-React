@@ -44,6 +44,10 @@
   height: 86px;
   padding: 10px;
   overflow: hidden;
+  cursor: pointer;
+}
+.Info__Title:hover {
+  color: #325f15;
 }
 .Info__Relevant {
   font-size: 1.2rem;

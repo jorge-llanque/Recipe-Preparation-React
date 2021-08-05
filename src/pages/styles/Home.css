@@ -1,7 +1,7 @@
 .Home {
   width: 100vw;
   height: 100vh;
-  overflow-x: hidden;
+  overflow: hidden;
   position: relative;
   padding: 15px;
 }
@@ -15,6 +15,17 @@
   background-color: var(--yellow-color-dark);
   z-index: -1;
   transform: rotate(25deg);
+}
+.Background-Triangle {
+  position: absolute;
+  top: 800px;
+  left: 50px;
+  width: 300px;
+  height: 300px;
+  border-radius: 20px;
+  background-color:#ff7836eb;
+  z-index: -1;
+  transform: rotate(55deg);
 }
 .Header__Title {
   margin-top: 100px;
@@ -76,10 +87,10 @@
   .Header__Subtitle {
     margin: 25px 0;
   }
-  .Form--Search input {
-  width: 380px;
-  height: 70px;
-  }
+    .Form--Search input {
+    width: 380px;
+    height: 70px;
+    }
 }
 @media screen and (min-width: 1024px) {
   .Home {
@@ -98,5 +109,19 @@
     width: 300px;
     height: 300px;
     border-radius: 20px;
+  }
+  .Background-Triangle {
+    top: 600px;
+  }
+  .Background-Circle{
+    position: absolute;
+    top:  400px;
+    right: 100px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color:#e0fc61eb;
+    z-index: -1;
+    transform: rotate(55deg);
   }
 }
