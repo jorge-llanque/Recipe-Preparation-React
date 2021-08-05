@@ -48,7 +48,7 @@
   cursor: pointer;
 }
 .Info__Title:hover {
-  color: #325f15;
+  color: var(--primary-color-dark-x2)
 }
 .Info__Relevant {
   font-size: 1.2rem;

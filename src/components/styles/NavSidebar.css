@@ -165,7 +165,7 @@
 /*===== Active link =====*/
 .active {
   color: var(--primary-color-dark);
-  background-color: var(--secundary-color-light);
+  background-color: var(--secundary-color-light-strong);
   border-radius: 5px;
   font-weight: 700;
 }
@@ -181,8 +181,8 @@
 }
 @media screen and (min-width: 1024px) {
   .Navbar__Container-1024{
-    background-color: lawngreen;
-    width: 100vw;
+    background-color: transparent;
+    width: auto;
     height:  70px;
     position: relative;
     overflow-y: visible;
@@ -196,7 +196,7 @@
   .Navigation-Wrapper {
     display: inline-block;
     position: static;
-    background-color: lightseagreen;
+    background-color: transparent;
     overflow-y: visible;
     transform: none;
     width: 100%;
@@ -205,6 +205,7 @@
   .Nav__Container {
     flex-direction: row;
     overflow-y: visible;
+    width: 1000px;
   }
   .Nav__Logo {
     background-color: transparent;
@@ -230,7 +231,7 @@
     align-content: center;
   }
   .Nav__Link:hover {
-    background-color: rgb(231, 230, 230);
+    background-color: var(--secundary-color-light);
     border-radius: 5px;
   }
   .Nav__Icon, .Nav__Name {

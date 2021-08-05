@@ -33,6 +33,9 @@
   border-radius: 20px;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
+.SuggestionList__Card:hover {
+  background-color: rgb(247, 247, 247);
+}
 .SuggestionList__Card input {
   background: transparent;
   height: 100%;
@@ -44,6 +47,9 @@
   color: var(--primary-color-light-strong);
   font-size: 2rem;
   cursor: pointer;
+}
+.SuggestionList__Card input:hover {
+  color: var(--primary-color-light);
 }
 @media screen and (min-width: 768px) {
   .SuggestionList {
