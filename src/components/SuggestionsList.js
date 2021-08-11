@@ -1,5 +1,5 @@
 import React from 'react'
-import {useLocation} from 'wouter'
+import {useLocation, Link} from 'wouter'
 import { v4 as uuidv4 } from 'uuid';
 import suggestionsList from '../utils/suggestionsList'
 import './styles/SuggestionsList.css'
@@ -20,11 +20,11 @@ const [path, pushLocation] = useLocation()
      }
     })
 
-    const handleOnClick = (e) => {
-      const keyword = e.target.value
-      console.log(keyword, type, keywordType)
-    pushLocation(`/search/${keyword}/${type}/${keywordType}`)
-  }
+  //   const handleOnClick = (e) => {
+  //     const keyword = e.target.value
+  //     console.log(keyword, type, keywordType)
+  //   pushLocation(`/search/${keyword}/${type}/${keywordType}`)
+  // }
 
   return (
     <>
@@ -36,11 +36,14 @@ const [path, pushLocation] = useLocation()
         {
           element.titleList.map( item =>(
             <li className="SuggestionList__Card" key={uuidv4()}>
-              <input 
-                type="button" 
-                onClick={handleOnClick} 
-                value={item.name} 
-              />
+              <Link to={`/search/${item.name}/${type}/${keywordType}`}>
+                <div className="Img-Thumbnail">
+                  <img loading="lazy" src={item.url} alt="food"/>
+                </div>
+                <div className="Img-Title">
+                  <h3>{item.name}</h3>
+                </div>
+              </Link>
             </li>
           ))
         }

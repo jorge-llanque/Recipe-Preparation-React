@@ -64,11 +64,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+a {
+  text-decoration: none;
+}
 @media screen and (min-width: 768px){
   html {
     font-size: 78%;
   }
-}
-@media screen and (min-width: 1024px) {
-  
 }

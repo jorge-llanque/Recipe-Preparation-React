@@ -23,33 +23,41 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  max-width: 70rem;
 }
 .SuggestionList__Card {
   list-style: none;
-  width: 250px;
-  height: 100px;
-  background-color: #fff;
+  width: 20rem;
+  height: 20rem;
   margin: 30px 20px;
   border-radius: 20px;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
-.SuggestionList__Card:hover {
-  background-color: rgb(247, 247, 247);
-}
-.SuggestionList__Card input {
-  background: transparent;
-  height: 100%;
+.Img-Thumbnail {
+  height: 80%;
   width: 100%;
-  border: none;
-  white-space: normal;
-  text-transform: capitalize;
-  letter-spacing: 1px;
-  color: var(--primary-color-light-strong);
-  font-size: 2rem;
-  cursor: pointer;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  overflow: hidden;
 }
-.SuggestionList__Card input:hover {
-  color: var(--primary-color-light);
+.Img-Thumbnail:hover {
+  opacity: 0.9;
+}
+.Img-Thumbnail img {
+  object-fit: cover;
+}
+.Img-Title{
+  height: 20%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Img-Title h3 {
+  color: var(--text-color);
+}
+.Img-Title h3:hover{
+  color: rgb(44, 43, 43);
 }
 @media screen and (min-width: 768px) {
   .SuggestionList {
