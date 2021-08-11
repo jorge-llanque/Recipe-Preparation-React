@@ -76,6 +76,11 @@
   align-items: center;
   margin-bottom: 20px;
 }
+.Nav__Logo-img {
+  width: 130px;
+  height: 30px;
+  margin: 0 auto;
+}
 .Nav__Logo-Name {
   font-family: 'Libre Franklin', sans-serif;
   font-size: 18px;
@@ -178,6 +183,11 @@
   .Navigation-Wrapper {
     width: 22rem;
   }
+  .Nav__Logo-img {
+    width: 175px;
+    height: 35px;
+    margin: 0 auto;
+  }
 }
 @media screen and (min-width: 1024px) {
   .Navbar__Container-1024{
@@ -215,6 +225,7 @@
     align-items: center;
     margin: 0 10px;
   }
+
   .Nav__List,
   .Nav__Items {
     display: grid;
@@ -229,9 +240,10 @@
     margin: 7px 7px 0 7px;
     justify-content: center;
     align-content: center;
+    transition-duration: .5s;
   }
   .Nav__Link:hover {
-    background-color: var(--secundary-color-light);
+    background-color: var(--secundary-color-light-strong);
     border-radius: 5px;
   }
   .Nav__Icon, .Nav__Name {
@@ -247,6 +259,7 @@
     height: auto;
     overflow: hidden;
     width: 130px;
+
   }
   /* Rotate icon arrow */
   .Nav__Dropdown:hover .Nav__Dropdown-Icon {

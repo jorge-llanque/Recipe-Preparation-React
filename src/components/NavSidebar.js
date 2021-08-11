@@ -8,7 +8,7 @@ import {
   BiDumbbell, 
   BiChevronDown } from 'react-icons/bi';
 import {Link, useRoute} from 'wouter'
-
+import Logo from './../logo.png'
 
 
 export default function NavSidebar() {
@@ -51,7 +51,7 @@ export default function NavSidebar() {
       >
             <nav className="Nav__Container">
                     <div className="Nav__Logo">
-                        <span className="Nav__Logo-Name">RECIPE NUTRITION</span>
+                        <img className="Nav__Logo-img" src={Logo} alt="tree"/>
                     </div>
     
                     <div className="Nav__List">
@@ -63,7 +63,7 @@ export default function NavSidebar() {
 
                             <ActiveLink href="/healthy-meals/food" className="Nav__Link" onClick={handleClick}>
                               <BiDumbbell className="Nav__Icon" />
-                                <span className="Nav__Name">Healthy Foods</span>
+                                <span className="Nav__Name">Healthy Food</span>
                             </ActiveLink>
                             
                             <div className="Nav__Dropdown Help1">

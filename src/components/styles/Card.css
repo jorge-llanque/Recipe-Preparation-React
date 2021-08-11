@@ -1,6 +1,5 @@
 .Card__Container {
-  width: 80%;
-  max-width: 250px;
+  width: 100%;
   height: auto;
   border-radius: 15px;
   display: flex;
@@ -8,7 +7,6 @@
   overflow: hidden;
   background-color: var(--card-background);
   box-shadow: rgba(149, 165, 151, 0.2) 0px 8px 24px;
-  margin: 15px 10px;
 }
 .Card__Image-Polaroid {
   width: 100%;
@@ -19,7 +17,8 @@
   overflow: hidden;
 }
 .Card__Image {
-  width: 115%;
+  
+  object-fit: cover;
 }
 .Info {
   display: flex;
@@ -39,10 +38,10 @@
 }
 .Info__Title {
   color: var(--primary-color-light-regular);
-  line-height: 100%;
+  line-height: 50px;
   font-size: 2rem;
   text-align: left;
-  height: 86px;
+  height: 50px;
   padding: 10px;
   overflow: hidden;
   cursor: pointer;
@@ -58,10 +57,4 @@
 .Info__Relevant span {
   color: var(--secundary-color-dark-strong);
   margin-right: 15px;
-}
-
-@media screen and (min-width: 1024px) {
-  .Card__Container {
-    margin: 20px 30px;
-  }
 }
