@@ -2,6 +2,7 @@
   height: auto;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   margin-bottom: 30px;
 }
 .Detail__Image-Polaroid {
